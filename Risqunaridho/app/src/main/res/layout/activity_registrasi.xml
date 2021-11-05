@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu2"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".registrasi">
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+
+<TextView
+    android:text="Sig Up"
+    android:fontFamily="@font/medium"
+    android:textStyle="bold"
+    android:textSize="30dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"/>
+
+<TextView
+    android:text="Please enter your account here"
+    android:fontFamily="@font/regular"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"/>
+
+
+<EditText
+    android:id="@+id/emailorphone"
+    android:background="@drawable/custum_text"
+    android:hint="email or phone"
+    android:drawablePadding="10dp"
+    android:drawableLeft="@drawable/ic_email2"
+    android:fontFamily="@font/regular"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<EditText
+    android:id="@+id/password"
+    android:background="@drawable/custum_text"
+    android:hint="password"
+    android:drawablePadding="10dp"
+    android:drawableLeft="@drawable/ic_password"
+    android:drawableRight="@drawable/ic_paswordlihat"
+    android:fontFamily="@font/regular"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:text="your password must contain"
+    android:id="@+id/forgot"
+    android:gravity="left"
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<Button
+    android:id="@+id/signin"
+    android:text="Login"
+    android:fontFamily="@font/medium"
+    android:textColor="@color/white"
+    android:background="@drawable/custum_btn"
+    android:layout_marginTop="40dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:background="@drawable/ic_continue_with"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:fontFamily="@font/regular"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+
+        android:id="@+id/image_4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/goggle2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/fb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/fb"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>
+
+<TextView
+    android:text="Don't have any account?,Sig Up"
+    android:fontFamily="@font/regular"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</LinearLayout>
+
+
+</LinearLayout>
