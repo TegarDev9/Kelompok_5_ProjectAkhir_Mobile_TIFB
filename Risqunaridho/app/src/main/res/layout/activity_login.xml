@@ -17,6 +17,7 @@
             android:gravity="center_horizontal"
             android:text="Sign In"
             android:textSize="30dp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -77,12 +78,13 @@
 
         <TextView
             android:id="@+id/tv_note2"
-            android:background="@drawable/ic_continue_with"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_signin"/>
+            android:layout_below="@+id/btn_signin"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_continue_with"
+            android:fontFamily="@font/regular"
+            />
 
         <ImageButton
             android:id="@+id/img_google"
@@ -96,14 +98,15 @@
 
 
         <TextView
-            android:id="@+id/sigup"
+            android:id="@+id/tv_footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_google"
             android:layout_marginTop="60dp"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
-            android:text="Don't have any account?,Sig Up" />
+            android:textColor="@color/black"
+            android:text="Don't have an account?,Sig Up" />
 
 
 

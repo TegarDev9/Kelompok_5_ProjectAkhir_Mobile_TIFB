@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String database_name = "db_login";
     public static final String table_name = "table_login";
 
-    public static final String row_id = "_id";
+    public static final String row_id = "id";
     public static final String row_email = "email";
     public static final String row_password = "Password";
 

@@ -8,16 +8,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".registrasi">
 
-<TextView
-    android:id="@+id/tv_signup1"
-    android:text="Sig Up"
-    android:fontFamily="@font/medium"
-    android:textStyle="bold"
-    android:textSize="30dp"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/tv_signup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/medium"
+        android:gravity="center_horizontal"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 <TextView
     android:id="@+id/tv_noteUp1"
@@ -61,7 +62,8 @@
     android:layout_marginTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/et_passwordUp1"/>
+    android:layout_below="@+id/et_passwordUp1"
+    android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tv_noteUp3"
@@ -72,7 +74,8 @@
         android:drawableLeft="@drawable/ic_email2"
         android:drawablePadding="10dp"
         android:gravity="left"
-        android:text="Atleast 6 character" />
+        android:text="Atleast 6 character"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tv_noteUp4"
@@ -83,7 +86,8 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_noteUp3"/>
+        android:layout_below="@+id/tv_noteUp3"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/btn_loginUp1"
@@ -118,12 +122,14 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/tv_signup2"
+        android:id="@+id/tv_footerUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_google"
         android:layout_marginTop="60dp"
         android:fontFamily="@font/regular"
         android:gravity="center_horizontal"
-        android:text="Don't have any account?,Sig Up" />
+        android:text="Already have account?, Sign In "
+        android:textColor="@color/black"/>
+
 </RelativeLayout>
