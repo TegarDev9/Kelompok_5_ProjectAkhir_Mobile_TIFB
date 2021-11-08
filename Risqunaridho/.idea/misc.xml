@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/Risqunaridho/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/Risqunaridho/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/Risqunaridho/app/src/main/res/layout/activity_registrasi.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/Risqunaridho/app/src/main/res/layout/activity_splashscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/Risqunaridho/app/src/main/res/layout/activity_verify_register.xml" value="0.20416666666666666" />
         <entry key="..\:/semester 3/Risqunaridho/app/src/main/res/drawable/custum_btn.xml" value="0.1" />
         <entry key="..\:/semester 3/Risqunaridho/app/src/main/res/drawable/custum_text.xml" value="0.1" />
         <entry key="..\:/semester 3/Risqunaridho/app/src/main/res/drawable/ic_continue_with.xml" value="0.1" />

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu2"
+    android:padding="30dp"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".registrasi">
-<LinearLayout
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
-
 
 <TextView
+    android:id="@+id/tv_signup1"
     android:text="Sig Up"
     android:fontFamily="@font/medium"
     android:textStyle="bold"
@@ -19,117 +17,112 @@ android:layout_height="wrap_content">
     android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="80dp"/>
+    android:layout_marginTop="50dp"/>
 
 <TextView
+    android:id="@+id/tv_noteUp1"
     android:text="Please enter your account here"
     android:fontFamily="@font/regular"
     android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"/>
-
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/tv_signup1"/>
 
 <EditText
-    android:id="@+id/emailorphone"
+    android:id="@+id/et_emailorphoneUp1"
     android:background="@drawable/custum_text"
     android:hint="email or phone"
     android:drawablePadding="10dp"
     android:drawableLeft="@drawable/ic_email2"
     android:fontFamily="@font/regular"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="30dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_noteUp1"/>
 
 <EditText
-    android:id="@+id/password"
+    android:id="@+id/et_passwordUp1"
     android:background="@drawable/custum_text"
     android:hint="password"
     android:drawablePadding="10dp"
     android:drawableLeft="@drawable/ic_password"
     android:drawableRight="@drawable/ic_paswordlihat"
     android:fontFamily="@font/regular"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
     android:layout_marginTop="10dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/et_emailorphoneUp1"/>
 
 <TextView
-    android:text="your password must contain"
-    android:id="@+id/forgot"
+    android:id="@+id/tv_noteUp2"
+    android:text="Your password must contain :"
     android:gravity="left"
-    android:layout_marginLeft="40dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="30dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/et_passwordUp1"/>
+
+    <TextView
+        android:id="@+id/tv_noteUp3"
+        android:text="Atleast 6 character"
+        android:gravity="left"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_email2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_noteUp2"/>
+
+    <TextView
+        android:id="@+id/tv_noteUp4"
+        android:text="Contains a number"
+        android:gravity="left"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_email2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_noteUp3"/>
 
 <Button
-    android:id="@+id/signin"
+    android:id="@+id/btn_loginUp1"
     android:text="Login"
     android:fontFamily="@font/medium"
     android:textColor="@color/white"
     android:background="@drawable/custum_btn"
-    android:layout_marginTop="40dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
+    android:layout_marginTop="30dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_noteUp4"/>
 
 <TextView
+    android:id="@+id/tv_noteUp5"
     android:background="@drawable/ic_continue_with"
     android:layout_marginTop="20dp"
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
     android:fontFamily="@font/regular"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
-<LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/btn_loginUp1"/>
 
     <ImageButton
-
-        android:id="@+id/image_4"
+        android:id="@+id/img_google"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="left"
-        android:layout_marginLeft="129dp"
         android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_noteUp5"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/goggle2"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/fb"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/fb"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-</LinearLayout>
-
-<TextView
-    android:text="Don't have any account?,Sig Up"
-    android:fontFamily="@font/regular"
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp"
-    android:gravity="center_horizontal"
-    android:layout_height="wrap_content"/>
-
-
-
-
-
-
-</LinearLayout>
-
-
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_google"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:text="Don't have any account?,Sig Up" />
+</RelativeLayout>
