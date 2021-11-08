@@ -66,14 +66,14 @@
 
         <Button
             android:id="@+id/btn_signin"
-            android:text="Login"
-            android:fontFamily="@font/medium"
-            android:textColor="@color/white"
-            android:background="@drawable/custum_btn"
-            android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_forgot"/>
+            android:layout_below="@+id/tv_forgot"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custum_btn"
+            android:fontFamily="@font/medium"
+            android:text="Login"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/tv_note2"
@@ -96,6 +96,7 @@
 
 
         <TextView
+            android:id="@+id/sigup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_google"

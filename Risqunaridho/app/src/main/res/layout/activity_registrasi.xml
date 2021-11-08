@@ -29,17 +29,17 @@
     android:layout_marginTop="20dp"
     android:layout_below="@+id/tv_signup1"/>
 
-<EditText
-    android:id="@+id/et_emailorphoneUp1"
-    android:background="@drawable/custum_text"
-    android:hint="email or phone"
-    android:drawablePadding="10dp"
-    android:drawableLeft="@drawable/ic_email2"
-    android:fontFamily="@font/regular"
-    android:layout_marginTop="30dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/tv_noteUp1"/>
+    <EditText
+        android:id="@+id/et_emailorphoneUp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_noteUp1"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_email2"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="email or phone" />
 
 <EditText
     android:id="@+id/et_passwordUp1"
@@ -65,14 +65,14 @@
 
     <TextView
         android:id="@+id/tv_noteUp3"
-        android:text="Atleast 6 character"
-        android:gravity="left"
-        android:drawablePadding="10dp"
-        android:drawableLeft="@drawable/ic_email2"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_noteUp2"/>
+        android:layout_below="@+id/tv_noteUp2"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_email2"
+        android:drawablePadding="10dp"
+        android:gravity="left"
+        android:text="Atleast 6 character" />
 
     <TextView
         android:id="@+id/tv_noteUp4"
@@ -85,16 +85,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_noteUp3"/>
 
-<Button
-    android:id="@+id/btn_loginUp1"
-    android:text="Login"
-    android:fontFamily="@font/medium"
-    android:textColor="@color/white"
-    android:background="@drawable/custum_btn"
-    android:layout_marginTop="30dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/tv_noteUp4"/>
+    <Button
+        android:id="@+id/btn_loginUp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_noteUp4"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custum_btn"
+        android:fontFamily="@font/medium"
+        android:text="Login"
+        android:textColor="@color/white" />
 
 <TextView
     android:id="@+id/tv_noteUp5"
@@ -118,6 +118,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
+        android:id="@+id/tv_signup2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_google"
