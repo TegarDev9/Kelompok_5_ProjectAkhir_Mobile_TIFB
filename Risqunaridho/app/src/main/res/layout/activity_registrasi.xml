@@ -90,14 +90,14 @@
         android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/btn_loginUp1"
+        android:id="@+id/btn_nextUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_noteUp4"
         android:layout_marginTop="30dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
-        android:text="Login"
+        android:text="Next"
         android:textColor="@color/white" />
 
 <TextView
@@ -109,7 +109,7 @@
     android:fontFamily="@font/regular"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/btn_loginUp1"/>
+    android:layout_below="@+id/btn_nextUp"/>
 
     <ImageButton
         android:id="@+id/img_google"

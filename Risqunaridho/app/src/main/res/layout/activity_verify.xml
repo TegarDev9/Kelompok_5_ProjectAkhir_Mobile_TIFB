@@ -123,10 +123,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_verify"
         android:layout_marginTop="10dp"
-        android:background="@drawable/custum_btn"
+        android:background="@drawable/bg_button_stroke"
         android:fontFamily="@font/medium"
         android:text="Send Again"
-        android:textColor="@color/white"/>
+        android:textColor="@color/biru2" />
 
     <TextView
         android:id="@+id/tv_footerUp2"

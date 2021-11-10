@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisqunaRidho">
         <activity
+            android:name=".RegisterSuccess"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -19,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".registrasi"/>
-        <activity android:name=".Verify"/>
-        <activity android:name=".Menu"/>
+        <activity android:name=".registrasi" />
+        <activity android:name=".Verify" />
+        <activity android:name=".Menu" />
     </application>
 
 </manifest>
