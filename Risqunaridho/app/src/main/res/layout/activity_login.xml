@@ -6,7 +6,7 @@
     android:background="@color/abu2"
     android:padding="30dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Login">
+    tools:context="com.risquna.risqunaridho.Login">
 
         <TextView
             android:id="@+id/tv_signin"

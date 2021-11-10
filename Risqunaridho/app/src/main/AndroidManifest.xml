@@ -9,13 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RisqunaRidho">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/cistomm_btnSend" />
-
-        <activity
-            android:name=".Verify"
-            android:exported="true" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -26,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
+        <activity android:name=".registrasi"/>
+        <activity android:name=".Verify"/>
     </application>
 
 </manifest>
