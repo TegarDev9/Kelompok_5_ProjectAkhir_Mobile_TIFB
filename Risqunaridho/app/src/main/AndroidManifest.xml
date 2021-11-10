@@ -21,6 +21,7 @@
         <activity android:name=".Login" />
         <activity android:name=".registrasi"/>
         <activity android:name=".Verify"/>
+        <activity android:name=".Menu"/>
     </application>
 
 </manifest>
