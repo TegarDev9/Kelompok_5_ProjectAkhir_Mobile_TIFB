@@ -20,7 +20,7 @@ public class Verify extends AppCompatActivity {
             @Override
             /**Membuat inten pindah */
             public void onClick(View v) {
-                Intent pindah = new Intent(Verify.this, Menu.class);
+                Intent pindah = new Intent(Verify.this, RegisterSuccess.class);
                 startActivity(pindah);
 
             }

@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu2"
-    android:padding="30dp"
     tools:context=".RegisterSuccess">
 
     <TextView
@@ -31,12 +30,22 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/tv_success"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_note"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_registrationsuccess" />
+
     <Button
         android:id="@+id/btn_nextUp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_note"
         android:layout_marginTop="400dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
         android:text="Next"
