@@ -40,7 +40,7 @@
         android:drawableLeft="@drawable/ic_email2"
         android:drawablePadding="10dp"
         android:fontFamily="@font/regular"
-        android:hint="email or phone" />
+        android:hint="email or phone number" />
 
 <EditText
     android:id="@+id/et_passwordUp1"

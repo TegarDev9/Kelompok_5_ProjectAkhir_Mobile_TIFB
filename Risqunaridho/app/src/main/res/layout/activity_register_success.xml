@@ -50,4 +50,5 @@
         android:fontFamily="@font/medium"
         android:text="Next"
         android:textColor="@color/white" />
+
 </RelativeLayout>
