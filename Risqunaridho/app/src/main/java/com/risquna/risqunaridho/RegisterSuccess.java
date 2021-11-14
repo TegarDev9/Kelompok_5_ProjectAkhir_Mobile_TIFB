@@ -20,7 +20,7 @@ public class RegisterSuccess extends AppCompatActivity {
             @Override
             /**Membuat inten pindah */
             public void onClick(View v) {
-                Intent pindah = new Intent(RegisterSuccess.this, Login.class);
+                Intent pindah = new Intent(RegisterSuccess.this, Menu.class);
                 startActivity(pindah);
 
             }

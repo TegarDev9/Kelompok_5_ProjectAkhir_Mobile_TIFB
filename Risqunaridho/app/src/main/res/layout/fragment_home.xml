@@ -13,7 +13,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ellipse_profile">
+        android:src="@drawable/ellipse_profile"
+        tools:ignore="MissingClass">
     </de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
@@ -78,17 +79,8 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/buttom_navigation" />
+        android:layout_height="match_parent"/>
 
     <!--  Membuat buttom navigation  -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/buttom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#f5f5f5"
-
-        app:menu="@menu/button_navigation"/>
     <!-- Memanggil menu buttom_navigation -->
 </RelativeLayout>
