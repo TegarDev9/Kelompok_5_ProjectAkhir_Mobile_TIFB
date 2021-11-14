@@ -129,14 +129,26 @@
         android:textColor="@color/biru2" />
 
     <TextView
+        android:id="@+id/tv_footerVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_sendAgain"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="72dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:text="Already have account?, "
+        android:textColor="@color/black"/>
+
+    <TextView
         android:id="@+id/tv_footerUp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_sendAgain"
+        android:layout_toRightOf="@+id/tv_footerVerify"
         android:layout_marginTop="160dp"
         android:fontFamily="@font/regular"
-        android:gravity="center_horizontal"
-        android:text="Already have account?, Sign In "
-        android:textColor="@color/black"/>
+        android:text=" Sign In"
+        android:textColor="@color/PrimaryDark"/>
 
 </RelativeLayout>

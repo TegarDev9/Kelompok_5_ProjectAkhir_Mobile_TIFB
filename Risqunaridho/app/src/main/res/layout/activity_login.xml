@@ -12,7 +12,7 @@
             android:id="@+id/tv_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/medium"
             android:gravity="center_horizontal"
             android:text="Sign In"
@@ -28,8 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_signin"
-            android:layout_marginTop="20dp"/>
-
+            android:layout_marginTop="10dp"/>
 
         <EditText
             android:id="@+id/et_emailorphone"
@@ -81,30 +80,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_signin"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/ic_continue_with"
-            android:fontFamily="@font/regular"
-            />
+            android:fontFamily="@font/regular" />
 
         <ImageButton
             android:id="@+id/img_google"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
             android:layout_below="@+id/tv_note2"
             android:layout_centerHorizontal="true"
             android:background="@drawable/goggle2"
             tools:ignore="SpeakableTextPresentCheck" />
 
-
         <TextView
             android:id="@+id/tv_footer"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_google"
             android:layout_marginTop="60dp"
+            android:layout_marginLeft="66dp"
             android:fontFamily="@font/regular"
-            android:gravity="center_horizontal"
             android:textColor="@color/black"
             android:text="Don't have an account?," />
 
@@ -114,14 +111,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_google"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="205dp"
+            android:layout_toRightOf="@+id/tv_footer"
             android:fontFamily="@font/regular"
-            android:gravity="center_horizontal"
             android:textColor="@color/PrimaryDark"
-            android:text="Sig Up" />
-
-
-
-
+            android:text=" Sign Up" />
 
 </RelativeLayout>
