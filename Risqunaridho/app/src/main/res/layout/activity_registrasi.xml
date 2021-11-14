@@ -129,7 +129,19 @@
         android:layout_marginTop="60dp"
         android:fontFamily="@font/regular"
         android:gravity="center_horizontal"
-        android:text="Already have account?, Sign In "
+        android:text="Already have account?, "
         android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_footerUp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_google"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="205dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:text="Sign In "
+        android:textColor="@color/PrimaryDark"/>
+
 
 </RelativeLayout>

@@ -106,7 +106,20 @@
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
             android:textColor="@color/black"
-            android:text="Don't have an account?,Sig Up" />
+            android:text="Don't have an account?," />
+
+        <TextView
+            android:id="@+id/tv_footer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_google"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="205dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center_horizontal"
+            android:textColor="@color/PrimaryDark"
+            android:text="Sig Up" />
+
 
 
 
