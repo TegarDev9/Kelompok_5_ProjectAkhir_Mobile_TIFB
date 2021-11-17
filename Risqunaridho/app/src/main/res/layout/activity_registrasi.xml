@@ -40,9 +40,9 @@
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_profile"
         android:drawablePadding="10dp"
-        android:textSize="15sp"
         android:fontFamily="@font/regular"
-        android:hint="Enter your full name" />
+        android:hint="Enter your full name"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/et_emailUp1"

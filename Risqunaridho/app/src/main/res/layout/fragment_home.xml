@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,79 +9,226 @@
     android:padding="30dp"
     tools:context=".HomeFragment">
 
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/ellipse_profile"
-        tools:ignore="MissingClass">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
     </de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="170dp"
         android:layout_height="34dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/img_profile1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="2dp"
         android:text="Hello David"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_salam"
+        app:layout_constraintStart_toEndOf="@+id/img_profile1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_salam"
         android:layout_width="170dp"
         android:layout_height="25dp"
-        android:layout_below="@+id/tv_name"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/img_profile1"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
         android:text="Good Morning..."
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_searchItem1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_notifikasi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_profile1"
+        tools:ignore="MissingConstraints" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_notifikasi"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp" />
+        android:background="@drawable/bg_button_notif"
+        android:src="@drawable/ic_notification"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_searchItem1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_searchItem1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_profile1"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custum_text"
         android:drawableRight="@drawable/search"
         android:drawablePadding="5dp"
         android:fontFamily="@font/regular"
-        android:hint="Search item" />
+        android:hint="Search item"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_profile1" />
 
     <TextView
         android:id="@+id/tv_category"
         android:layout_width="170dp"
         android:layout_height="34dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/et_searchItem1"
         android:text="Category"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_searchItem1" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_category"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_category"/>
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category">
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <ImageButton
+                android:id="@+id/ib_kerudung"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_email2"
+                android:background="@drawable/bg_button_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.033" />
+
+            <TextView
+                android:id="@+id/tv_kerudung"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Kerudung"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ib_kerudung" />
+
+            <ImageButton
+                android:id="@+id/ib_gamis"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_email2"
+                android:background="@drawable/bg_button_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_kerudung"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.045" />
+
+            <TextView
+                android:id="@+id/tv_gamis"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Gamis"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_kerudung"
+                app:layout_constraintTop_toBottomOf="@+id/ib_gamis" />
+
+            <ImageButton
+                android:id="@+id/ib_koko"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_email2"
+                android:background="@drawable/bg_button_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_gamis"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_koko"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Baju Koko"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_gamis"
+                app:layout_constraintTop_toBottomOf="@+id/ib_koko" />
+
+            <ImageButton
+                android:id="@+id/ib_alat"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_email2"
+                android:background="@drawable/bg_button_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_koko"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_alat"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Alat Shalat"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_koko"
+                app:layout_constraintTop_toBottomOf="@+id/ib_alat" />
+
+            <ImageButton
+                android:id="@+id/ib_peci"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_email2"
+                android:background="@drawable/bg_button_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/ib_alat"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_peci"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Peci"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_alat"
+                app:layout_constraintTop_toBottomOf="@+id/ib_peci" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
     <!--  Membuat buttom navigation  -->
     <!-- Memanggil menu buttom_navigation -->
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
