@@ -17,18 +17,19 @@
         android:gravity="center_horizontal"
         android:text="Registration Success"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_note"
-        android:text="You can explore our product now"
-        android:fontFamily="@font/regular"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/tv_success"/>
+        android:layout_below="@+id/tv_success"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:text="You can explore our product now"
+        android:textSize="15sp" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -49,6 +50,8 @@
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
         android:text="Next"
-        android:textColor="@color/white" />
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
 
 </RelativeLayout>

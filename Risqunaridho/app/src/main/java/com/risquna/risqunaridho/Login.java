@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
     private Button btn_signin;
-    EditText et_emailorphone, et_password;
+    EditText et_email, et_password;
 
 
 
@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_login );
 
-        et_emailorphone = (EditText)findViewById(R.id.et_emailorphone);
+        et_email = (EditText)findViewById(R.id.et_email);
         et_password = (EditText)findViewById(R.id.et_password);
         btn_signin = (Button)findViewById(R.id.btn_signin);
 

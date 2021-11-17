@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 
 public class registrasi extends AppCompatActivity {
-    EditText et_emailorphoneUp1, et_passwordUp1;
-    TextView tv_noteUp3, tv_noteUp4;
+    EditText et_emailUp1, et_passwordUp1;
+    TextView tv_noteUp3;
     Button btn_nextUp;
 
 
@@ -21,10 +21,9 @@ public class registrasi extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_registrasi );
 
-        et_emailorphoneUp1 = (EditText) findViewById ( R.id.et_emailorphoneUp1 );
+        et_emailUp1 = (EditText) findViewById ( R.id.et_emailUp1 );
         et_passwordUp1 = (EditText) findViewById ( R.id.et_passwordUp1 );
         tv_noteUp3 = (TextView) findViewById ( R.id.tv_noteUp3 );
-        tv_noteUp4 = (TextView) findViewById ( R.id.tv_noteUp4 );
         btn_nextUp = (Button) findViewById ( R.id.btn_nextUp );
 
 
