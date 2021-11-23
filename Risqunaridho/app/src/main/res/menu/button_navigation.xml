@@ -8,12 +8,7 @@
     <item
         android:id="@+id/nav_chart"
         android:icon="@drawable/ic_buy"
-        android:title="Buy"/>
-
-    <item
-        android:id="@+id/nav_Whiclist"
-        android:icon="@drawable/ic_heart"
-        android:title="Whichlist"/>
+        android:title="Add"/>
 
     <item
         android:id="@+id/nav_profil"

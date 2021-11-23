@@ -35,10 +35,7 @@ public class Menu extends AppCompatActivity {
                         break;
 
                     case R.id.nav_chart:
-                        selectedFragment = new CartFragment ();
-                        break;
-                    case R.id.nav_Whiclist:
-                        selectedFragment = new WhishlistFragment ();
+                        selectedFragment = new AddFragment ();
                         break;
 
                     case R.id.nav_profil:

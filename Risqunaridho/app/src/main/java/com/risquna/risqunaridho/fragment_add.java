@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link WhishlistFragment#newInstance} factory method to
+ * Use the {@link fragment_add#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WhishlistFragment extends Fragment {
+public class fragment_add extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class WhishlistFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public WhishlistFragment() {
+    public fragment_add() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class WhishlistFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment WhishlistFragment.
+     * @return A new instance of fragment fragment_add.
      */
     // TODO: Rename and change types and number of parameters
-    public static WhishlistFragment newInstance(String param1, String param2) {
-        WhishlistFragment fragment = new WhishlistFragment ();
+    public static fragment_add newInstance(String param1, String param2) {
+        fragment_add fragment = new fragment_add ();
         Bundle args = new Bundle ();
         args.putString ( ARG_PARAM1, param1 );
         args.putString ( ARG_PARAM2, param2 );
@@ -59,6 +59,6 @@ public class WhishlistFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate ( R.layout.fragment_whishlist, container, false );
+        return inflater.inflate ( R.layout.fragment_add, container, false );
     }
 }
