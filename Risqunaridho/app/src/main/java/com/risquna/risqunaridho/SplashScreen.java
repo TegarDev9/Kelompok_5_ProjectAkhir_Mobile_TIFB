@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 
 
-
 public class SplashScreen extends Activity {
 
     protected boolean _active = true;

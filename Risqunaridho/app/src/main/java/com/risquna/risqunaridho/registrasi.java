@@ -1,13 +1,14 @@
 package com.risquna.risqunaridho;
 
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+
 
 
 public class registrasi extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class registrasi extends AppCompatActivity {
         btn_nextUp = (Button) findViewById ( R.id.btn_nextUp );
 
 
-        btn_nextUp = findViewById(R.id.btn_nextUp);
+        btn_nextUp = findViewById( R.id.btn_nextUp);
         btn_nextUp.setOnClickListener(new View.OnClickListener() {
             @Override
             /**Membuat inten pindah */

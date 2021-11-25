@@ -8,5 +8,5 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="300dp"
-        android:src="@drawable/rr" />
+        android:src="@drawable/logo" />
 </RelativeLayout>

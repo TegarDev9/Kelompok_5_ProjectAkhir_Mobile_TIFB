@@ -7,9 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryEditor">#0C29C9</color>
+    <color name="colorPrimaryDarkEditor">#1284ca</color>
+    <color name="colorAccentEditor">#e24000</color>
+    <color name="colorPrimary">#ff4800</color>
+    <color name="colorPrimaryDark">#dc4a10</color>
+    <color name="colorAccent">#0824C3</color>
     <color name="abu2">#F5F5F8</color>
     <color name="abu3">#DFE0F3</color>
     <color name="biru">#DFE0F3</color>
     <color name="biru2">#4C4DDC</color>
     <color name="PrimaryDark">#2223CA</color>
+    <color name="abu4">#DF65656A</color>
 </resources>
