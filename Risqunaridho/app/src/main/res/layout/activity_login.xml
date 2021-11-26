@@ -8,24 +8,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.risquna.risqunaridho.Login">
 
-        <TextView
-            android:id="@+id/tv_signin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/img_signin"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/medium"
-            android:gravity="center_horizontal"
-            android:text="Sign In"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/tv_note1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_signin"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/img_signin"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/regular"
             android:gravity="center_horizontal"
             android:textSize="15sp"
@@ -36,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_note1"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/custum_text"
             android:drawableLeft="@drawable/ic_email2"
             android:drawablePadding="5dp"
@@ -58,21 +54,12 @@
             android:hint="Enter your password"
             android:textSize="15sp" />
 
-        <TextView
-            android:text="Forgot password?"
-            android:id="@+id/tv_forgot"
-            android:gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_below="@+id/et_password"/>
 
         <Button
             android:id="@+id/btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_forgot"
+            android:layout_below="@+id/et_password"
             android:layout_marginTop="40dp"
             android:background="@drawable/custum_btn"
             android:fontFamily="@font/medium"
@@ -82,30 +69,10 @@
             android:textColor="@color/white" />
 
         <TextView
-            android:id="@+id/tv_note2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_signin"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/ic_continue_with"
-            android:fontFamily="@font/regular"
-            android:textSize="15sp"/>
-
-        <ImageButton
-            android:id="@+id/img_google"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:layout_below="@+id/tv_note2"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/goggle2"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
             android:id="@+id/tv_footer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img_google"
+            android:layout_below="@+id/btn_signin"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="67dp"
             android:fontFamily="@font/regular"
@@ -117,7 +84,7 @@
             android:id="@+id/tv_footer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img_google"
+            android:layout_below="@+id/btn_signin"
             android:layout_marginTop="60dp"
             android:layout_toRightOf="@+id/tv_footer"
             android:fontFamily="@font/regular"
