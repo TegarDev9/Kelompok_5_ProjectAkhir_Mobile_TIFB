@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/abu2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".EditorActivity">
+    tools:context=".Barang.EditorActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

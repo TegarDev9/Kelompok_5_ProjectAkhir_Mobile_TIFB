@@ -1,6 +1,8 @@
-package com.risquna.risqunaridho;
+package com.risquna.risqunaridho.Barang;
 
 import android.widget.Filter;
+
+import com.risquna.risqunaridho.produk;
 
 import java.util.ArrayList;
 

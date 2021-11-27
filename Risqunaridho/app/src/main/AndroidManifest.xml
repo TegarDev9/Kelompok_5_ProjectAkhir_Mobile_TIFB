@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.risquna.risqunaridho">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RisqunaRidhoStore">
+        <activity
+            android:name=".DashbordActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashbord"
+            android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
+        <activity
+            android:name=".dashbord"
+            android:exported="true"
+            android:label="@string/title_activity_dashbord"
+            android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
         <activity
             android:name=".RegisterSuccess"
             android:exported="true" />
@@ -21,16 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-    <activity android:name=".Login" />
-    <activity android:name=".registrasi" />
-    <activity android:name=".Verify" />
-        <activity android:name=".MainActivity"/>
-
-
-        <activity android:name="com.risquna.risqunaridho.EditorActivity"
-            android:theme="@style/EditorTheme">
-        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".registrasi" />
+        <activity android:name=".Verify" />
+        <activity android:name=".Barang.MainActivity" />
+        <activity
+            android:name=".Barang.EditorActivity"
+            android:theme="@style/EditorTheme" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.risquna.risqunaridho;
+package com.risquna.risqunaridho.Barang;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.risquna.risqunaridho.R;
+import com.risquna.risqunaridho.produk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +39,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> implemen
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate( R.layout.list_item, parent, false);
         return new MyViewHolder(view, mListener);
     }
 

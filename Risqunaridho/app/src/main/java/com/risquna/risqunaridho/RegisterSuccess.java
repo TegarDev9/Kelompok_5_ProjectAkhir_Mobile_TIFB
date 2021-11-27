@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.risquna.risqunaridho.Barang.MainActivity;
+
 
 public class RegisterSuccess extends AppCompatActivity {
     private Button btn_nextUp2;
@@ -20,7 +22,7 @@ public class RegisterSuccess extends AppCompatActivity {
             @Override
             /**Membuat inten pindah */
             public void onClick(View v) {
-                Intent pindah = new Intent(RegisterSuccess.this, MainActivity.class);
+                Intent pindah = new Intent(RegisterSuccess.this, DashbordActivity.class);
                 startActivity(pindah);
 
             }

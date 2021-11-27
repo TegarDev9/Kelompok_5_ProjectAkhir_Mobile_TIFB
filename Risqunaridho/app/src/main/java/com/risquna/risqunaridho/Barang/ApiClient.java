@@ -1,4 +1,4 @@
-package com.risquna.risqunaridho;
+package com.risquna.risqunaridho.Barang;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

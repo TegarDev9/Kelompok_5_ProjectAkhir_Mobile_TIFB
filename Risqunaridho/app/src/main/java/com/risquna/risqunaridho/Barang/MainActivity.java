@@ -1,4 +1,4 @@
-package com.risquna.risqunaridho;
+package com.risquna.risqunaridho.Barang;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -17,6 +17,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.risquna.risqunaridho.R;
+import com.risquna.risqunaridho.produk;
 
 import java.util.List;
 
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView( R.layout.activity_main);
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 

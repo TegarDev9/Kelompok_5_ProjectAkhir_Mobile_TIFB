@@ -1,4 +1,6 @@
-package com.risquna.risqunaridho;
+package com.risquna.risqunaridho.Barang;
+
+import com.risquna.risqunaridho.produk;
 
 import java.util.List;
 
