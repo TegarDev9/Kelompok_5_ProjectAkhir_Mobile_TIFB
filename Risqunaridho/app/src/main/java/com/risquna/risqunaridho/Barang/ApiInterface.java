@@ -25,19 +25,19 @@ public interface ApiInterface {
             @Field("namaproduk") String namaproduk,
             @Field("deskripsi") String deskripsi,
             @Field("rating") String rating,
-            @Field("gender") int gender,
+            @Field("stok") String stok,
             @Field("tgl") String tgl,
             @Field("picture") String picture);
 
     @FormUrlEncoded
     @POST("update_produk.php")
-    Call<produk> updatePet(
+    Call<produk> update(
             @Field("key") String key,
             @Field("idproduk") int id,
             @Field("namaproduk") String namaproduk,
             @Field("deskripsi") String deskripsi,
             @Field("rating") String rating,
-            @Field("gender") int gender,
+            @Field("stok") String stok,
             @Field("tgl") String tgl,
             @Field("picture") String picture);
 

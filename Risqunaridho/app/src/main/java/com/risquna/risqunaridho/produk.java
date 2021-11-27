@@ -12,12 +12,12 @@ public class produk {
     private String deskripsi;
     @SerializedName("rating")
     private String rating;
-    @SerializedName("gender")
-    private int gender;
+    @SerializedName("stok")
+    private String stok;
     @SerializedName("tgl")
     private String tgl;
-    @SerializedName("picture")
-    private String picture;
+    @SerializedName("gambar")
+    private String gambar;
     @SerializedName("love")
     private Boolean love;
     @SerializedName("value")
@@ -57,12 +57,12 @@ public class produk {
         this.rating = rating;
     }
 
-    public int getGender() {
-        return gender;
+    public String getstok() {
+        return stok;
     }
 
-    public void setGender(int gender) {
-        this.gender = gender;
+    public void setstok(String stok) {
+        this.stok = stok;
     }
 
     public String getTgl() {
@@ -74,11 +74,11 @@ public class produk {
     }
 
     public String getPicture() {
-        return picture;
+        return gambar;
     }
 
     public void setPicture(String picture) {
-        this.picture = picture;
+        this.gambar = picture;
     }
 
     public Boolean getLove() {
@@ -104,5 +104,9 @@ public class produk {
     public void setMassage(String massage) {
         this.massage = massage;
     }
+
+
+
+
 }
 

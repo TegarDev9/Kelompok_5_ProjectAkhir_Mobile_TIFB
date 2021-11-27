@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity{
                 intent.putExtra("namaproduk", produkList.get(position).getNamaproduk ());
                 intent.putExtra("deskripsi", produkList.get(position).getDeskripsi ());
                 intent.putExtra("rating", produkList.get(position).getRating ());
-                intent.putExtra("gender", produkList.get(position).getGender());
-                intent.putExtra("picture", produkList.get(position).getPicture());
+                intent.putExtra("stok", produkList.get(position).getstok ());
+                intent.putExtra("gambar", produkList.get(position).getPicture());
                 intent.putExtra("tgl", produkList.get(position).getTgl ());
                 startActivity(intent);
 

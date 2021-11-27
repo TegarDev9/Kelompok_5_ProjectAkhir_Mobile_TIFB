@@ -48,20 +48,24 @@ import retrofit2.Response;
 
 public class EditorActivity extends AppCompatActivity {
 
-    private Spinner mGenderSpinner;
-    private EditText mName, mSpecies, mBreed, mBirth;
+
+    private EditText mName;
+    private EditText mSpecies;
+    private EditText mBreed;
+    private EditText mBirth;
+    private EditText stoks;
     private CircleImageView mPicture;
     private FloatingActionButton mFabChoosePic;
 
-    Calendar myCalendar = Calendar.getInstance();
+    Calendar myCalendar = Calendar.getInstance ();
 
-    private int mGender = 0;
-    public static final int GENDER_UNKNOWN = 0;
-    public static final int GENDER_MALE = 1;
-    public static final int GENDER_FEMALE = 2;
-
-    private String namaproduk, deskripsi, rating, picture, tgl;
-    private int idproduk, gender;
+    private String namaproduk;
+    private String deskripsi;
+    private String rating;
+    private String gambar;
+    private String tgl;
+    private String stok;
+    private int idproduk;
 
     private Menu action;
     private Bitmap bitmap;
@@ -70,54 +74,54 @@ public class EditorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView( R.layout.activity_editor);
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_editor );
 
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar ();
         if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled ( true );
         }
 
-        mName = findViewById(R.id.name);
-        mSpecies = findViewById(R.id.species);
-        mBreed = findViewById(R.id.breed);
-        mBirth = findViewById(R.id.birth);
-        mPicture = findViewById(R.id.picture);
-        mFabChoosePic = findViewById(R.id.fabChoosePic);
+        mName = findViewById ( R.id.name );
+        mSpecies = findViewById ( R.id.species );
+        mBreed = findViewById ( R.id.breed );
+        mBirth = findViewById ( R.id.birth );
+        mPicture = findViewById ( R.id.picture );
+        mFabChoosePic = findViewById ( R.id.fabChoosePic );
 
-        mGenderSpinner = findViewById(R.id.gender);
-        mBirth = findViewById(R.id.birth);
+        stoks = findViewById ( R.id.stok);
+        mBirth = findViewById ( R.id.birth );
 
-        mBirth.setFocusableInTouchMode(false);
-        mBirth.setFocusable(false);
-        mBirth.setOnClickListener(new View.OnClickListener() {
+        mBirth.setFocusableInTouchMode ( false );
+        mBirth.setFocusable ( false );
+        mBirth.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(EditorActivity.this, date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                new DatePickerDialog ( EditorActivity.this, date, myCalendar
+                        .get ( Calendar.YEAR ), myCalendar.get ( Calendar.MONTH ),
+                        myCalendar.get ( Calendar.DAY_OF_MONTH ) ).show ();
             }
-        });
+        } );
 
-        mFabChoosePic.setOnClickListener(new View.OnClickListener() {
+        mFabChoosePic.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                chooseFile();
+                chooseFile ();
             }
-        });
+        } );
 
-        setupSpinner();
 
-        Intent intent = getIntent();
-        idproduk = intent.getIntExtra("idproduk", 0);
-        namaproduk = intent.getStringExtra("namaproduk");
-        deskripsi = intent.getStringExtra("deskripsi");
-        rating = intent.getStringExtra("rating");
-        tgl = intent.getStringExtra("tgl");
-        picture = intent.getStringExtra("picture");
-        gender = intent.getIntExtra("gender", 0);
 
-        setDataFromIntentExtra();
+        Intent intent = getIntent ();
+        idproduk = intent.getIntExtra ( "idproduk", 0 );
+        namaproduk = intent.getStringExtra ( "namaproduk" );
+        deskripsi = intent.getStringExtra ( "deskripsi" );
+        rating = intent.getStringExtra ( "rating" );
+        tgl = intent.getStringExtra ( "tgl" );
+        gambar = intent.getStringExtra ( "picture" );
+        stok = intent.getStringExtra ( "stok" );
+
+        setDataFromIntentExtra ();
 
     }
 
@@ -125,67 +129,27 @@ public class EditorActivity extends AppCompatActivity {
 
         if (idproduk != 0) {
 
-            readMode();
-            getSupportActionBar().setTitle("Edit " + namaproduk.toString());
+            readMode ();
+            getSupportActionBar ().setTitle ( "Edit " + namaproduk.toString () );
 
-            mName.setText(namaproduk);
-            mSpecies.setText(deskripsi);
-            mBreed.setText(rating);
-            mBirth.setText(tgl);
+            mName.setText ( namaproduk );
+            mSpecies.setText ( deskripsi );
+            mBreed.setText ( rating );
+            stoks.setText ( stok );
+            mBirth.setText ( tgl );
 
-            RequestOptions requestOptions = new RequestOptions();
-            requestOptions.skipMemoryCache(true);
-            requestOptions.diskCacheStrategy(DiskCacheStrategy.NONE);
-            requestOptions.placeholder(R.drawable.logo);
-            requestOptions.error(R.drawable.logo);
+            RequestOptions requestOptions = new RequestOptions ();
+            requestOptions.skipMemoryCache ( true );
+            requestOptions.diskCacheStrategy ( DiskCacheStrategy.NONE );
+            requestOptions.placeholder ( R.drawable.logo );
+            requestOptions.error ( R.drawable.logo );
 
-            Glide.with(EditorActivity.this)
-                    .load(picture)
-                    .apply(requestOptions)
-                    .into(mPicture);
+            Glide.with ( EditorActivity.this )
+                    .load ( gambar )
+                    .apply ( requestOptions )
+                    .into ( mPicture );
 
-            switch (gender) {
-                case GENDER_MALE:
-                    mGenderSpinner.setSelection(1);
-                    break;
-                case GENDER_FEMALE:
-                    mGenderSpinner.setSelection(2);
-                    break;
-                default:
-                    mGenderSpinner.setSelection(0);
-                    break;
-            }
-
-        } else {
-            getSupportActionBar().setTitle("Add a Pet");
         }
-    }
-
-    private void setupSpinner(){
-        ArrayAdapter genderSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.array_gender_options, android.R.layout.simple_spinner_item);
-        genderSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        mGenderSpinner.setAdapter(genderSpinnerAdapter);
-
-        mGenderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selection = (String) parent.getItemAtPosition(position);
-                if (!TextUtils.isEmpty(selection)) {
-                    if (selection.equals(getString(R.string.gender_male))) {
-                        mGender = GENDER_MALE;
-                    } else if (selection.equals(getString(R.string.gender_female))) {
-                        mGender = GENDER_FEMALE;
-                    } else {
-                        mGender = GENDER_UNKNOWN;
-                    }
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                mGender = 0;
-            }
-        });
     }
 
     @Override
@@ -277,7 +241,7 @@ public class EditorActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
-                        deleteData("delete", idproduk, picture);
+                        deleteData("delete", idproduk, gambar);
                     }
                 });
                 dialog.setNegativeButton("Cencel", new DialogInterface.OnClickListener() {
@@ -359,7 +323,7 @@ public class EditorActivity extends AppCompatActivity {
         String name = mName.getText().toString().trim();
         String species = mSpecies.getText().toString().trim();
         String breed = mBreed.getText().toString().trim();
-        int gender = mGender;
+        String stok = stoks.getText().toString().trim();
         String birth = mBirth.getText().toString().trim();
         String picture = null;
         if (bitmap == null) {
@@ -370,7 +334,7 @@ public class EditorActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<produk> call = apiInterface.insertPet(key, name, species, breed, gender, birth, picture);
+        Call<produk> call = apiInterface.insertPet(key, name, species, breed, stok, birth, picture);
 
         call.enqueue(new Callback<produk>() {
             @Override
@@ -411,7 +375,7 @@ public class EditorActivity extends AppCompatActivity {
         String name = mName.getText().toString().trim();
         String species = mSpecies.getText().toString().trim();
         String breed = mBreed.getText().toString().trim();
-        int gender = mGender;
+        String stok= stoks.getText().toString().trim();
         String birth = mBirth.getText().toString().trim();
         String picture = null;
         if (bitmap == null) {
@@ -422,7 +386,7 @@ public class EditorActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<produk> call = apiInterface.updatePet(key, id,name, species, breed, gender, birth, picture);
+        Call<produk> call = apiInterface.update(key, idproduk,namaproduk, deskripsi, rating, stok, tgl, gambar);
 
         call.enqueue(new Callback<produk>() {
             @Override
@@ -502,7 +466,7 @@ public class EditorActivity extends AppCompatActivity {
         mSpecies.setFocusable(false);
         mBreed.setFocusable(false);
 
-        mGenderSpinner.setEnabled(false);
+        stoks.setFocusable (false);
         mBirth.setEnabled(false);
 
         mFabChoosePic.setVisibility(View.INVISIBLE);
@@ -516,7 +480,7 @@ public class EditorActivity extends AppCompatActivity {
         mSpecies.setFocusableInTouchMode(true);
         mBreed.setFocusableInTouchMode(true);
 
-        mGenderSpinner.setEnabled(true);
+        stoks.setEnabled(true);
         mBirth.setEnabled(true);
 
         mFabChoosePic.setVisibility(View.VISIBLE);
