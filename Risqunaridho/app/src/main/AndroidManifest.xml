@@ -16,11 +16,7 @@
             android:exported="true"
             android:label="@string/title_activity_dashbord"
             android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
-        <activity
-            android:name=".dashbord"
-            android:exported="true"
-            android:label="@string/title_activity_dashbord"
-            android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
+
         <activity
             android:name=".RegisterSuccess"
             android:exported="true" />
@@ -37,6 +33,7 @@
         <activity android:name=".registrasi" />
         <activity android:name=".Verify" />
         <activity android:name=".Barang.MainActivity" />
+        <activity android:name=".Pelanggan.PelangganActivity" />
         <activity
             android:name=".Barang.EditorActivity"
             android:theme="@style/EditorTheme" />

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.risquna.risqunaridho.Barang.MainActivity;
+import com.risquna.risqunaridho.Pelanggan.PelangganActivity;
 
 
 public class RegisterSuccess extends AppCompatActivity {
@@ -22,7 +23,7 @@ public class RegisterSuccess extends AppCompatActivity {
             @Override
             /**Membuat inten pindah */
             public void onClick(View v) {
-                Intent pindah = new Intent(RegisterSuccess.this, MainActivity.class);
+                Intent pindah = new Intent(RegisterSuccess.this, PelangganActivity.class);
                 startActivity(pindah);
 
             }
