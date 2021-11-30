@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".registrasi" />
+        <activity android:name=".Admin.registrasi" />
         <activity android:name=".Verify" />
         <activity android:name=".Barang.MainActivity" />
         <activity android:name=".Pelanggan.PelangganActivity" />
