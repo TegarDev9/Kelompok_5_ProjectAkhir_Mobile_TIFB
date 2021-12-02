@@ -1,4 +1,7 @@
-package com.risquna.risqunaridho.Admin;
+package com.risquna.risqunaridho.Admin.API;
+
+import com.risquna.risqunaridho.Admin.model.login.Login;
+import com.risquna.risqunaridho.Admin.model.register.Register;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -6,23 +9,23 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
-public interface APIRequestDataAdmin {
-    @GET("retrieve.php")
-    Call<RestroServerAdmin> ardRetrieveData();
+public interface ApiInterface {
+//    @GET("retrieve.php")
+//    Call<RestroServerAdmin> ardRetrieveData();
 
     @FormUrlEncoded
     @POST("register.php")
-    Call<ResponseModelAdmin> ardRegister(
+    Call<Register> ardRegister(
             @Field("nama") String nama,
+            @Field("notelp") String notelp,
             @Field("email") String email,
             @Field("password") String password,
-            @Field("no_telp") String no_telp,
             @Field("role") int role
     );
 
     @FormUrlEncoded
     @POST("Login.php")
-    Call<RestroServerAdmin> ardLogin(
+    Call<Login> ardLogin(
             @Field("email") String email,
             @Field("password") String password
     );

@@ -6,7 +6,7 @@
     android:background="@color/abu2"
     android:padding="30dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.risquna.risqunaridho.Login">
+    tools:context="com.risquna.risqunaridho.Admin.model.login.LoginActivity">
 
         <ImageView
             android:id="@+id/img_signin"
@@ -64,6 +64,7 @@
             android:background="@drawable/custum_btn"
             android:fontFamily="@font/medium"
             android:text="Login"
+            android:onClick="onClick"
             android:textSize="15sp"
             android:textAllCaps="false"
             android:textColor="@color/white" />
@@ -88,8 +89,9 @@
             android:layout_marginTop="60dp"
             android:layout_toRightOf="@+id/tv_footer"
             android:fontFamily="@font/regular"
-            android:textColor="@color/PrimaryDark"
             android:text=" Sign Up"
-            android:textSize="15sp"/>
+            android:onClick="onClick"
+            android:textColor="@color/PrimaryDark"
+            android:textSize="15sp" />
 
 </RelativeLayout>

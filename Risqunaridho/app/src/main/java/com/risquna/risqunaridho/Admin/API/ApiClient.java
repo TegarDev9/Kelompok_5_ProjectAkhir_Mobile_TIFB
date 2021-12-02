@@ -1,24 +1,24 @@
-package com.risquna.risqunaridho.Admin;
+package com.risquna.risqunaridho.Admin.API;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RestroServerAdmin {
+public class ApiClient {
     //membuat base url
-    private static final String baseURL = "http://192.168.1.10/RisqunaRidho_Mobile/";
+    private static final String BASE_URL = "http://192.168.1.10/RizqunaRidho_Mobile/";
     //membuat variable retrofit
-    private static Retrofit retro;
+    private static Retrofit retrofit;
 
     //membuat function dengan tipe retrofit
     //private static RetroServer mInstance;
-    public static Retrofit konekRetrofit() {
-        if (retro == null) {
-            retro = new Retrofit.Builder()
-                    .baseUrl(baseURL)
+    public static Retrofit getClient() {
+        if (retrofit == null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
                     //mengkonvert data menjadi json agar dapat dikenali android
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retro;
+        return retrofit;
     }
-}
+    }

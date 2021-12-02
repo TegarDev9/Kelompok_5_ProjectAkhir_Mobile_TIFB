@@ -1,15 +1,15 @@
-package com.risquna.risqunaridho.Admin;
+package com.risquna.risqunaridho.Admin.model.register;
 
-public class DataModelAdmin {
-    private int id_petugas, role;
-    private String nama, email, password, no_telp;
+public class RegisterData {
+    private int idpetugas, role;
+    private String nama, notelp, email, password;
 
-    public int getId_petugas() {
-        return id_petugas;
+    public int getIdpetugas() {
+        return idpetugas;
     }
 
-    public void setId_petugas(int id_petugas) {
-        this.id_petugas = id_petugas;
+    public void setIdpetugas(int idpetugas) {
+        this.idpetugas = idpetugas;
     }
 
     public int getRole() {
@@ -28,6 +28,14 @@ public class DataModelAdmin {
         this.nama = nama;
     }
 
+    public String getNotelp() {
+        return notelp;
+    }
+
+    public void setNotelp(String notelp) {
+        this.notelp = notelp;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -44,11 +52,4 @@ public class DataModelAdmin {
         this.password = password;
     }
 
-    public String getNo_telp() {
-        return no_telp;
-    }
-
-    public void setNo_telp(String no_telp) {
-        this.no_telp = no_telp;
-    }
 }

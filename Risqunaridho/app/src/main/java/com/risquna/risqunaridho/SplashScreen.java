@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
+import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
+
 
 public class SplashScreen extends Activity {
 
@@ -38,7 +40,7 @@ public class SplashScreen extends Activity {
     }
 
     public  void startMainScreen(){
-        Intent intent = new Intent (this, Login.class);
+        Intent intent = new Intent (this, LoginActivity.class);
         startActivity ( intent );
     }
 

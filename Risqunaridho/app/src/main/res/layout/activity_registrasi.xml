@@ -6,7 +6,7 @@
     android:background="@color/abu2"
     android:padding="30dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Admin.registrasi">
+    tools:context=".Admin.model.register.RegistrasiActivity">
 
     <TextView
         android:id="@+id/tv_signUp"
@@ -27,7 +27,7 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:layout_below="@+id/tv_signUp"/>
 
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_noteUp1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_profile"
         android:drawablePadding="10dp"
@@ -84,31 +84,56 @@
         android:hint="Phone number"
         android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/et_roleUp"
+    <TextView
+        android:id="@+id/tv_registerfor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_telpUp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custum_text"
-        android:drawablePadding="10dp"
+
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/regular"
-        android:hint="Role"
+        android:gravity="center_horizontal"
+        android:text="Register for "
+        android:textColor="@color/black"
         android:textSize="15sp" />
 
+    <RadioGroup
+        android:id="@+id/rg_roleUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/tv_registerfor"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_superAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super Admin"
+            android:textColor="@color/black"
+            android:layout_marginRight="50dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:textColor="@color/black"/>
+    </RadioGroup>
 
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_roleUp"
+        android:layout_below="@+id/rg_roleUp"
         android:layout_marginTop="25dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
         android:text="Next"
+        android:onClick="onClick"
         android:textAllCaps="false"
-        android:textSize="15sp"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
 
     <TextView
@@ -116,13 +141,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_submit"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="68dp"
-        android:textSize="15sp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/regular"
         android:gravity="center_horizontal"
         android:text="Already have account?, "
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_footerUp2"
@@ -134,6 +159,7 @@
         android:fontFamily="@font/regular"
         android:text=" Sign In"
         android:textSize="15sp"
+        android:onClick="onClick"
         android:textColor="@color/PrimaryDark"/>
 
 </RelativeLayout>

@@ -18,9 +18,6 @@
             android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
 
         <activity
-            android:name=".RegisterSuccess"
-            android:exported="true" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -29,14 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Admin.registrasi" />
-        <activity android:name=".Verify" />
-        <activity android:name=".Barang.MainActivity" />
-        <activity android:name=".Pelanggan.PelangganActivity" />
-        <activity
-            android:name=".Barang.EditorActivity"
-            android:theme="@style/EditorTheme" />
+        <activity android:name=".Admin.model.login.LoginActivity" />
+        <activity android:name=".Admin.model.register.RegistrasiActivity" />
     </application>
 
 </manifest>
