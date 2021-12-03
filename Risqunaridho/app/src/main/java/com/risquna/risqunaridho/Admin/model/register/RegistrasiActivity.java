@@ -1,5 +1,7 @@
 package com.risquna.risqunaridho.Admin.model.register;
 
+import static java.lang.Integer.parseInt;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -104,9 +106,8 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
                 notelp = etTelp.getText().toString();
                 email = etEmail.getText().toString();
                 password = etPassword.getText().toString();
-
-                idTerpilih = rgRole.getCheckedRadioButtonId();
-                role = Integer.parseInt(rbRole.getText().toString());
+                idTerpilih = rgRole.getCheckedRadioButtonId ();
+                role = parseInt ( rbRole.getText ().toString ());
 
                 register(nama, notelp, email, password, role);
                 break;
@@ -114,6 +115,8 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
+            default:
+
         }
     }
 

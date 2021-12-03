@@ -1,5 +1,7 @@
 package com.risquna.risqunaridho.Admin.model.login;
 
+import static com.risquna.risqunaridho.R.layout.activity_login;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
+
 import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 import com.risquna.risqunaridho.session.SessionManager;
@@ -34,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_login);
+        setContentView ( R.layout.activity_login );
 
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
