@@ -50,7 +50,7 @@
         android:id="@+id/id_produk"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="130dp"
         android:background="@drawable/custum_dasbord"
         android:src="@drawable/ic_category"
@@ -72,7 +72,7 @@
         android:id="@+id/id_pemesanan"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="130dp"
         android:layout_toRightOf="@+id/id_produk"
         android:background="@drawable/custum_dasbord"
@@ -83,35 +83,35 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@id/id_pemesanan"
-        android:layout_marginLeft="170dp"
+        android:layout_marginLeft="150dp"
         android:text="Pemesanan" />
 
     <ImageButton
         android:id="@+id/id_pelanggan"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="130dp"
         android:layout_toRightOf="@+id/id_pemesanan"
         android:background="@drawable/custum_dasbord"
         android:src="@drawable/ic_document" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Pelanggan"
         android:layout_below="@+id/id_pelanggan"
-        android:layout_marginLeft="300dp"/>
+        android:layout_marginLeft="270dp"
+        android:text="Pelanggan" />
+
     <TextView
         android:id="@+id/txtdashbord"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="DASHBORD TOKO"
-        android:layout_below="@+id/id_produk"
-        android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
-        android:textStyle="bold"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="380dp"
-        />
+        android:text="DASHBORD TOKO"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
