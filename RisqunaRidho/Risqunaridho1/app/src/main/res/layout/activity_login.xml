@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/abu2"
+    android:padding="30dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.risquna.risqunaridho.Admin.model.login.LoginActivity">
+
+        <ImageView
+            android:id="@+id/img_signin"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_note1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_signin"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:text="Please enter your account here" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_note1"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custum_text"
+            android:drawableLeft="@drawable/ic_email2"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/regular"
+            android:hint="Enter your email"
+            android:text="admin@email.com"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_email"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawableRight="@drawable/ic_passwordhide"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/regular"
+            android:hint="Enter your password"
+            android:text="123"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custum_btn"
+            android:fontFamily="@font/medium"
+            android:text="Login"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signin"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/regular"
+            android:text="Don't have an account?,"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_footer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signin"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/tv_footer"
+            android:fontFamily="@font/regular"
+            android:text=" Sign Up"
+            android:textColor="@color/PrimaryDark"
+            android:textSize="15sp" />
+
+</RelativeLayout>

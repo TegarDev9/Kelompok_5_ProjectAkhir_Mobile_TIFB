@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashbordActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="500dp"
+        android:background="@drawable/bgkulah"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/profilku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/helo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/img_profile1"
+        android:layout_marginTop="40dp"
+        android:text="HELLO DAVID"
+        android:textColor="@color/white"
+        android:translationX="120dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/good"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:text="Good morning"
+        android:textColor="@color/white"
+        android:translationX="135dp" />
+
+    <ImageButton
+        android:id="@+id/id_produk"
+        android:layout_width="98dp"
+        android:layout_height="91dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/custum_dasbord"
+        android:src="@drawable/ic_category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <TextView
+        android:id="@+id/txtproduk"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_produk"
+        android:layout_marginLeft="60dp"
+        android:text="Produk" />
+
+
+    <ImageButton
+        android:id="@+id/id_pemesanan"
+        android:layout_width="98dp"
+        android:layout_height="91dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="130dp"
+        android:layout_toRightOf="@+id/id_produk"
+        android:background="@drawable/custum_dasbord"
+        android:src="@drawable/ic_document" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_pemesanan"
+        android:layout_marginLeft="170dp"
+        android:text="Pemesanan" />
+
+    <ImageButton
+        android:id="@+id/id_pelanggan"
+        android:layout_width="98dp"
+        android:layout_height="91dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="130dp"
+        android:layout_toRightOf="@+id/id_pemesanan"
+        android:background="@drawable/custum_dasbord"
+        android:src="@drawable/ic_document" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Pelanggan"
+        android:layout_below="@+id/id_pelanggan"
+        android:layout_marginLeft="300dp"/>
+    <TextView
+        android:id="@+id/txtdashbord"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="DASHBORD TOKO"
+        android:layout_below="@+id/id_produk"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="380dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_produk"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginBottom="280dp"
+
+
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="List Pesananan"
+        android:layout_below="@id/id_produk"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+
+
+</RelativeLayout>
