@@ -46,4 +46,11 @@ public interface ApiInterface {
             @Field ( "email" ) String email,
             @Field ( "password" ) String password
     );
+
+    //petugas
+
+    @GET("RizqunaRidho_Mobile/retrievepetugas.php")
+    Call<com.risquna.risqunaridho.petugas.ResponseModel> ardRetrieveDatapetugas();
+
+
 }

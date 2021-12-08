@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/id_pemesanan"
         android:layout_marginLeft="150dp"
-        android:text="Pemesanan" />
+        android:text="Petugas" />
 
     <ImageButton
         android:id="@+id/id_pelanggan"

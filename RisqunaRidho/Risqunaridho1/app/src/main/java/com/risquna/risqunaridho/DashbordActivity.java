@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.risquna.risqunaridho.pelanggan.pelangganActivity;
-import com.risquna.risqunaridho.pemesanan.pemesananActivity;
+import com.risquna.risqunaridho.petugas.petugasActivity;
 import com.risquna.risqunaridho.produk.produkActivity;
 
 public class DashbordActivity extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class DashbordActivity extends AppCompatActivity {
         btnpemesanan.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (DashbordActivity.this, pemesananActivity.class);
+                Intent intent = new Intent (DashbordActivity.this, petugasActivity.class);
                 startActivity ( intent );
             }
         } );

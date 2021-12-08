@@ -18,7 +18,7 @@
             android:name=".pelanggan.pelangganActivity"
             android:exported="true" />
         <activity
-            android:name=".pemesanan.pemesananActivity"
+            android:name=".petugas.petugasActivity"
             android:exported="true" />
         <activity
             android:name=".produk.produkActivity"
