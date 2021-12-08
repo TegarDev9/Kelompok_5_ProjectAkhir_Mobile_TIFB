@@ -97,35 +97,27 @@
         android:textColor="@color/black"
         android:textSize="15sp" />
 
-    <RadioGroup
-        android:id="@+id/rg_roleUp"
+    <EditText
+        android:id="@+id/et_role"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:layout_below="@+id/tv_registerfor"
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/et_telpUp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="Role"
+        android:textSize="15sp" />
 
-        <RadioButton
-            android:id="@+id/rb_superAdmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Super Admin"
-            android:textColor="@color/black"
-            android:layout_marginRight="50dp"/>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admin"
-            android:textColor="@color/black"/>
-    </RadioGroup>
+
 
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rg_roleUp"
+        android:layout_below="@+id/et_role"
         android:layout_marginTop="25dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"

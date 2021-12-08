@@ -24,80 +24,32 @@ import retrofit2.Response;
 
 
 public class RegistrasiActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText etNama, etEmail, etPassword, etTelp;
+    private EditText etNama, etEmail, etPassword, etTelp,etrole;
     private Button btnSubmit;
     ApiInterface apiInterface;
-    private String nama, email, password, notelp;
-    private int idTerpilih, role;
-    private RadioGroup rgRole;
-    private RadioButton rbRole;//variable penampung
+    private String nama, email, password, notelp,role;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrasi);
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_registrasi );
 
-        etNama = (EditText) findViewById(R.id.et_nameUp);
-        etTelp = (EditText) findViewById(R.id.et_telpUp);
-        etEmail = (EditText) findViewById(R.id.et_emailUp);
-        etPassword = (EditText) findViewById(R.id.et_passwordUp);
-        rgRole = (RadioGroup) findViewById(R.id.rg_roleUp);
-        rbRole = (RadioButton) findViewById(idTerpilih);
-
-
-        btnSubmit = findViewById(R.id.btn_submit);
-        btnSubmit.setOnClickListener(this);
+        etNama = (EditText) findViewById ( R.id.et_nameUp );
+        etTelp = (EditText) findViewById ( R.id.et_telpUp );
+        etEmail = (EditText) findViewById ( R.id.et_emailUp );
+        etPassword = (EditText) findViewById ( R.id.et_passwordUp );
+        etrole = (EditText) findViewById ( R.id.et_role );
 
 
-//        btnSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            /**Membuat inten pindah */
-//            public void onClick(View v) {
-//                //menangkap data yang diisikan
-//                nama = etNama.getText().toString();
-//                email = etEmail.getText().toString();
-//                password = etPassword.getText().toString();
-//                no_telp = etTelp.getText().toString();
-//
-//                idTerpilih = rgRole.getCheckedRadioButtonId();
-//                rbRole = (RadioButton) findViewById(idTerpilih);
-//                role = Integer.parseInt(rbRole.getText().toString());
-//
-//                //validasi
-//                if (nama.trim().equals("")) {
-//                    etNama.setError("Wajib diisi!");
-//                    etNama.requestFocus();
-//                    return;
-//                } else if (email.trim().equals("")) {
-//                    etEmail.setError("Wajib diisi!");
-//                    etEmail.requestFocus();
-//                    return;
-//                } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-//                    etEmail.setError("Masukkan email yang benar!");
-//                    etEmail.requestFocus();
-//                    return;
-//                } else if (password.trim().equals("")) {
-//                    etPassword.setError("Wajib diisi!");
-//                    etPassword.requestFocus();
-//                    return;
-//                } else if (no_telp.trim().equals("")) {
-//                    etTelp.setError("Wajib diisi!");
-//                    etTelp.requestFocus();
-//                    return;
-////                } else if (role.trim().equals("")) {
-////                    etRole.setError("Wajib diisi!");
-////                    etRole.requestFocus();
-////                    return;
-//                } else {
-//                    createData();
-//                }
-//            }
-//        });
-//    }
+
+        btnSubmit = findViewById ( R.id.btn_submit );
+        btnSubmit.setOnClickListener ( this );
+
+
     }
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -106,10 +58,9 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
                 notelp = etTelp.getText().toString();
                 email = etEmail.getText().toString();
                 password = etPassword.getText().toString();
-                idTerpilih = rgRole.getCheckedRadioButtonId ();
-                role = parseInt ( rbRole.getText ().toString ());
+                role = etrole.getText ().toString ();
 
-                register(nama, notelp, email, password, role);
+                register(nama, notelp, email, password, Integer.parseInt ( role ) );
                 break;
             case R.id.tv_footerUp2:
                 Intent intent = new Intent(this, LoginActivity.class);
