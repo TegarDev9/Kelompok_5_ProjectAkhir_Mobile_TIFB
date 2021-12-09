@@ -11,9 +11,6 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
-//    @GET("retrieve.php")
-//    Call<RestroServerAdmin> ardRetrieveData();
-
     @FormUrlEncoded
     @POST("RizqunaRidho_Mobile/register.php")
     Call<Register> ardRegister(
@@ -51,6 +48,10 @@ public interface ApiInterface {
 
     @GET("RizqunaRidho_Mobile/retrievepetugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardRetrieveDatapetugas();
+
+    @GET("RizqunaRidho_Mobile/retrievepemesanan.php")
+    Call<com.risquna.risqunaridho.pemesanan.ResponseModel> ardRetrieveDataPemesanan();
+
 
 
 }

@@ -1,17 +1,36 @@
 package com.risquna.risqunaridho;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.risquna.risqunaridho.Admin.API.ApiClient;
+import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.pelanggan.pelangganActivity;
+import com.risquna.risqunaridho.pemesanan.AdapterPemesanan;
+import com.risquna.risqunaridho.pemesanan.DataPemesanan;
+import com.risquna.risqunaridho.pemesanan.ResponseModel;
 import com.risquna.risqunaridho.petugas.petugasActivity;
 import com.risquna.risqunaridho.produk.produkActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class DashbordActivity extends AppCompatActivity {
+    private RecyclerView rvData;
+    private RecyclerView.Adapter adData;
+    private RecyclerView.LayoutManager lmData;
+    private List<DataPemesanan> listData = new ArrayList<DataPemesanan> ();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +41,10 @@ public class DashbordActivity extends AppCompatActivity {
         ImageButton btnproduk = findViewById ( R.id.id_produk );
         ImageButton btnpemesanan = findViewById ( R.id.id_pemesanan );
         ImageButton btnpelanggan = findViewById ( R.id.id_pelanggan );
+        rvData = findViewById ( R.id.rv_data );
+        lmData = new LinearLayoutManager ( this, LinearLayoutManager.VERTICAL, false );
+        rvData.setLayoutManager ( lmData );
+        retrieveData ();
 
 
         btnproduk.setOnClickListener ( new View.OnClickListener () {
@@ -47,5 +70,33 @@ public class DashbordActivity extends AppCompatActivity {
                 startActivity ( intent );
             }
         } );
+    }
+
+    public void retrieveData() {
+        ApiInterface ardData = ApiClient.getClient ( DashbordActivity.this ).create ( ApiInterface.class );
+        Call<ResponseModel> tampilData = ardData.ardRetrieveDataPemesanan ();
+
+
+        tampilData.enqueue ( new Callback<ResponseModel> () {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                int kode = response.body ().getKode ();
+                String pesan = response.body ().getPesan ();
+
+                Toast.makeText ( DashbordActivity.this, "Kode:" + kode + "  |Pesan:" + pesan, Toast.LENGTH_SHORT ).show ();
+
+                listData = response.body ().getData ();
+
+                adData = new AdapterPemesanan ( DashbordActivity.this, listData );
+                rvData.setAdapter ( adData );
+                adData.notifyDataSetChanged ();
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                Toast.makeText ( DashbordActivity.this, "gagal Menghubungkan Server" + t.getMessage (), Toast.LENGTH_SHORT ).show ();
+            }
+        } );
+
     }
 }

@@ -228,5 +228,25 @@
         android:textStyle="bold" />
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtdashbord"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="219dp"
+        android:layout_marginBottom="1dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/card_pemesanan" />
+
+
+    </ScrollView>
+
+
+
 
 </RelativeLayout>
