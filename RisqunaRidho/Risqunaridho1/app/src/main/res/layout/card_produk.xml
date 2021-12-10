@@ -2,6 +2,100 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/cardProduk">
+    android:id="@+id/cardProduk"
+    android:padding="6dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_barang"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="9dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_idbarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id barang"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_idkategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id kategori"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_namaBarang"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/img_barang"
+            android:text="Nama barang"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_hargaBefore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga before"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_hargaAfter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_namaBarang"
+            android:layout_toRightOf="@+id/img_barang"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_tgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_stok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stok"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_hargaAfter"
+            android:layout_toRightOf="@+id/img_barang"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>
