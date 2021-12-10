@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:id="@+id/card"
     android:layout_height="wrap_content"
+    android:background="@color/abu3"
     android:layout_margin="6dp">
 
  <LinearLayout
@@ -22,38 +23,47 @@
          android:id="@+id/tv_nama"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="Namapelanggan"
-         android:textSize="22sp"
-         android:textStyle="bold"/>
+         android:text="Nama pelanggan"
+         android:textSize="18sp"
+         android:textColor="@color/black"
+         android:textStyle="bold" />
 
      <TextView
          android:id="@+id/tv_email"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="email pelanggan"
-         android:textSize="18sp"
-         android:maxLines="2"/>
+         android:text="Email pelanggan"
+         android:textSize="16sp"
+         android:textColor="@color/black"
+         android:maxLines="2"
+         android:layout_marginTop="3dp"/>
 
      <TextView
          android:id="@+id/tv_password"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="password pelanggan"
-         android:textSize="18sp"/>
+         android:text="Password pelanggan"
+         android:textSize="16sp"
+         android:textColor="@color/black"
+         android:layout_marginTop="3dp"/>
 
      <TextView
          android:id="@+id/tv_notelp"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="nomer telp"
-         android:textSize="14sp"/>
+         android:text="Nomer telp"
+         android:textSize="16sp"
+         android:textColor="@color/black"
+         android:layout_marginTop="3dp"/>
 
      <TextView
          android:id="@+id/tv_alamat"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="alamat"
-         android:textSize="14sp"/>
+         android:text="Alamat"
+         android:textColor="@color/black"
+         android:textSize="14sp"
+         android:layout_marginTop="3dp"/>
 
 
  </LinearLayout>
