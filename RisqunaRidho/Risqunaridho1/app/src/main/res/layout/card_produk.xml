@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     android:id="@+id/cardProduk"
-    android:padding="6dp">
+    app:cardCornerRadius="5dp"
+    android:layout_margin="6dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,7 +15,7 @@
         android:padding="6dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_barang"
+            android:id="@+id/img_produk"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="4dp"
@@ -20,26 +23,26 @@
             android:src="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/tv_idbarang"
+            android:id="@+id/tv_idProduk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Id barang"
             android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/tv_idkategori"
+            android:id="@+id/tv_idKategori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Id kategori"
             android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/tv_namaBarang"
+            android:id="@+id/tv_namaProduk"
             android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="3dp"
-            android:layout_toRightOf="@+id/img_barang"
+            android:layout_toRightOf="@+id/img_produk"
             android:text="Nama barang"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -72,8 +75,8 @@
             android:layout_height="wrap_content"
             android:text="Harga"
             android:textColor="@color/black"
-            android:layout_below="@+id/tv_namaBarang"
-            android:layout_toRightOf="@+id/img_barang"
+            android:layout_below="@+id/tv_namaProduk"
+            android:layout_toRightOf="@+id/img_produk"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="15dp"
             android:textSize="16sp"/>
@@ -92,7 +95,7 @@
             android:text="Stok"
             android:textColor="@color/black"
             android:layout_below="@+id/tv_hargaAfter"
-            android:layout_toRightOf="@+id/img_barang"
+            android:layout_toRightOf="@+id/img_produk"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="15dp"
             android:textSize="16sp"/>

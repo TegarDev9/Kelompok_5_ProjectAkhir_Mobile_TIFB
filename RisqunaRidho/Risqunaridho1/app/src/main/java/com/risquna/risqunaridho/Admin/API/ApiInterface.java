@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
     @FormUrlEncoded
-    @POST("RizqunaRidho_Mobile/register.php")
+    @POST("Rizquna_Mobile/register.php")
     Call<Register> ardRegister(
             @Field("nama") String nama,
             @Field("notelp") String notelp,
@@ -22,7 +22,7 @@ public interface ApiInterface {
     );
 
     @FormUrlEncoded
-    @POST("RizqunaRidho_Mobile/Login.php")
+    @POST("Rizquna_Mobile/Login.php")
     Call<Login> ardLogin(
             @Field("email") String email,
             @Field("password") String password
@@ -30,11 +30,11 @@ public interface ApiInterface {
 
     //Pelanggan
 
-    @GET("RizqunaRidho_Mobile/retrieveusers.php")
+    @GET("Rizquna_Mobile/retrieveusers.php")
     Call<ResponseModel> ardRetrieveData();
 
     @FormUrlEncoded
-    @POST("RizqunaRidho_Mobile/create.php")
+    @POST("Rizquna_Mobile/create.php")
     Call<ResponseModel> ardCreateData(
             @Field ( "userid" ) int userid,
             @Field ( "nama" ) String nama,
@@ -46,12 +46,13 @@ public interface ApiInterface {
 
     //petugas
 
-    @GET("RizqunaRidho_Mobile/retrievepetugas.php")
+    @GET("Rizquna_Mobile/retrievepetugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardRetrieveDatapetugas();
 
-    @GET("RizqunaRidho_Mobile/retrievepemesanan.php")
+    @GET("Rizquna_Mobile/retrievepemesanan.php")
     Call<com.risquna.risqunaridho.pemesanan.ResponseModel> ardRetrieveDataPemesanan();
 
-
+    @GET("Rizquna_Mobile/retrieveproduk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardRetrieveDataProduk();
 
 }

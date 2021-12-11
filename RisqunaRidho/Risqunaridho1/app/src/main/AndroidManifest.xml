@@ -15,6 +15,9 @@
         android:theme="@style/Theme.RisqunaRidhoStore"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".produk.tambahProdukActivity"
+            android:exported="true" />
+        <activity
             android:name=".pelanggan.pelangganActivity"
             android:exported="true" />
         <activity
