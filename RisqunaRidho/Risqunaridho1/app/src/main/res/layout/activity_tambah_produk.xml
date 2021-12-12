@@ -1,9 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/abu2"
+    android:padding="16dp"
     tools:context=".produk.tambahProdukActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/et1"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        android:layout_marginRight="5dp"-->
+    <!--        android:layout_weight="2">-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/etFName"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="First Name"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:textAllCaps="true" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="2"-->
+    <!--        android:layout_below="@+id/et1">-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/etLName"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="Last Name"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:textAllCaps="true" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/layoutPicture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="140dp"
+            android:layout_height ="140dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabChoosePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_picture"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutData"
+        android:layout_below="@+id/layoutPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/sp_dkategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="-3dp"
+            android:background="@color/white"
+            android:hint="Id kategori"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/et_namaProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sp_dkategori"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/regular"
+            android:hint="Nama Produk"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_namaProduk"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:fontFamily="@font/regular"
+            android:hint="Deskripsi"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_deskripsi"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:textSize="15sp"
+            android:fontFamily="@font/regular"
+            android:hint="Rating" />
+
+        <EditText
+            android:id="@+id/et_hargaBefore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_rating"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/regular"
+            android:hint="Harga Before"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/et_hargaAfter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_hargaBefore"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/regular"
+            android:hint="Harga After"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_tgl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_hargaAfter"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/regular"
+            android:inputType="date"
+            android:hint="Tanggal"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_stok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_tgl"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custum_text"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/regular"
+            android:hint="Harga Before"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_stok"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custum_btn"
+            android:fontFamily="@font/medium"
+            android:text="Sub,it"
+
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
