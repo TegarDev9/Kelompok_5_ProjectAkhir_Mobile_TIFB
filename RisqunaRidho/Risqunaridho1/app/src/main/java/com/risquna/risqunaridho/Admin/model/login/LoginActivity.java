@@ -8,19 +8,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
-import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
+
 
 import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 import com.risquna.risqunaridho.session.SessionManager;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,36 +34,27 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate (savedInstanceState);
+        super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_login );
 
-        EditText et_email = findViewById(R.id.et_email);
-        EditText et_password = findViewById(R.id.et_password);
+        EditText et_email = findViewById ( R.id.et_email );
+        EditText et_password = findViewById ( R.id.et_password );
 
-        Button btn_signin = findViewById(R.id.btn_signin);
-        TextView tv_footer2 = findViewById(R.id.tv_footer2);
+        Button btn_signin = findViewById ( R.id.btn_signin );
 
-        sessionManager = new SessionManager(LoginActivity.this);
 
-        btn_signin.setOnClickListener(new View.OnClickListener() {
+        sessionManager = new SessionManager ( LoginActivity.this );
+
+        btn_signin.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                email = et_email.getText().toString();
-                password = et_password.getText().toString();
-                login(email,password);
+                email = et_email.getText ().toString ();
+                password = et_password.getText ().toString ();
+                login ( email, password );
             }
-        });
+        } );
 
-
-        tv_footer2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, RegistrasiActivity.class);
-                startActivity(intent);
-
-            }
-        });
-   }
+    }
 
     private void login(String email, String password) {
         apiInterface = ApiClient.getClient(LoginActivity.this).create(ApiInterface.class);

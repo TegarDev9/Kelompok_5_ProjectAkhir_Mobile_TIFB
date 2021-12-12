@@ -2,19 +2,27 @@ package com.risquna.risqunaridho.petugas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
 import com.risquna.risqunaridho.R;
 
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
+import com.risquna.risqunaridho.produk.produkActivity;
+import com.risquna.risqunaridho.produk.tambahProdukActivity;
 
 
 import java.util.ArrayList;
@@ -30,18 +38,45 @@ public class petugasActivity extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataPetugas> listData = new ArrayList<DataPetugas> ();
+    private FloatingActionButton fabPetugas;
+    private SwipeRefreshLayout srlPetugas;
+    private ProgressBar pbPetugas;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_petugas );
-
+        fabPetugas = findViewById(R.id.fab_petugas);
+        srlPetugas = findViewById(R.id.srl_petugas);
         rvData = findViewById ( R.id.rv_data );
+        pbPetugas = findViewById(R.id.pb_petugas);
         lmData = new LinearLayoutManager ( this, LinearLayoutManager.VERTICAL,false );
         rvData.setLayoutManager ( lmData );
         retrieveData ();
+
+
+        srlPetugas.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlPetugas.setRefreshing(true);
+                retrieveData ();
+                srlPetugas.setRefreshing(false);
+            }
+        });
+
+        //pindah ke activity tambah
+        fabPetugas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(petugasActivity.this, RegistrasiActivity.class));
+            }
+        });
     }
+
+
+
+
 
     public void retrieveData() {
         ApiInterface ardData = ApiClient.getClient ( petugasActivity.this).create ( ApiInterface.class );
@@ -64,6 +99,7 @@ public class petugasActivity extends AppCompatActivity {
                 adData = new AdapterPetugas ( petugasActivity.this, listData );
                 rvData.setAdapter ( adData );
                 adData.notifyDataSetChanged ();
+                pbPetugas.setVisibility(View.INVISIBLE);
             }
 
             @Override
@@ -71,8 +107,11 @@ public class petugasActivity extends AppCompatActivity {
 
 
                 Toast.makeText ( petugasActivity.this, "gagal Menghubungkan Server" + t.getMessage (), Toast.LENGTH_SHORT ).show ();
+
+                pbPetugas.setVisibility(View.INVISIBLE);
             }
         } );
 
     }
+
 }
