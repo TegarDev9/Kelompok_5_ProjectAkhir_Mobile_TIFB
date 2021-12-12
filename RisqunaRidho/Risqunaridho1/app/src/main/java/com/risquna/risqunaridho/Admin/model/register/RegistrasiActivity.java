@@ -62,10 +62,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
 
                 register(nama, notelp, email, password, Integer.parseInt ( role ) );
                 break;
-            case R.id.tv_footerUp2:
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                break;
+                
             default:
 
         }

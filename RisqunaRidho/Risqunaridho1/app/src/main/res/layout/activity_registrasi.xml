@@ -9,33 +9,22 @@
     tools:context=".Admin.model.register.RegistrasiActivity">
 
     <TextView
-        android:id="@+id/tv_signUp"
+        android:id="@+id/TambahPetugas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/medium"
         android:gravity="center_horizontal"
-        android:text="Sign Up"
+        android:text="Tambah Petugas"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tv_noteUp1"
-        android:text="Please enter your account here"
-        android:fontFamily="@font/regular"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="15sp"
-        android:layout_below="@+id/tv_signUp"/>
 
     <EditText
         android:id="@+id/et_nameUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_noteUp1"
+        android:layout_below="@+id/TambahPetugas"
         android:layout_marginTop="50dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_profile"
@@ -127,31 +116,5 @@
         android:textColor="@color/white"
         android:textSize="15sp" />
 
-
-    <TextView
-        android:id="@+id/tv_footerUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_submit"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/regular"
-        android:gravity="center_horizontal"
-        android:text="Already have account?, "
-        android:textColor="@color/black"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/tv_footerUp2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_submit"
-        android:layout_toRightOf="@+id/tv_footerUp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/regular"
-        android:text=" Sign In"
-        android:textSize="15sp"
-        android:onClick="onClick"
-        android:textColor="@color/PrimaryDark"/>
 
 </RelativeLayout>
