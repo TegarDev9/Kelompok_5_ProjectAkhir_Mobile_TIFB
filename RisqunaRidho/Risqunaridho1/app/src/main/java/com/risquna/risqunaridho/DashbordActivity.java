@@ -8,16 +8,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
+import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
 import com.risquna.risqunaridho.pelanggan.pelangganActivity;
 import com.risquna.risqunaridho.pemesanan.AdapterPemesanan;
 import com.risquna.risqunaridho.pemesanan.DataPemesanan;
 import com.risquna.risqunaridho.pemesanan.ResponseModel;
 import com.risquna.risqunaridho.petugas.petugasActivity;
 import com.risquna.risqunaridho.produk.produkActivity;
+import com.risquna.risqunaridho.session.SessionManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashbordActivity extends AppCompatActivity {
+    TextView etUsername, etemail;
+    SessionManager sessionManager;
+    String username, name;
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -70,6 +76,27 @@ public class DashbordActivity extends AppCompatActivity {
                 startActivity ( intent );
             }
         } );
+
+        sessionManager = new SessionManager ( DashbordActivity.this );
+        if (!sessionManager.isLoggedIn ()) {
+            moveToLogin ();
+    }
+
+        etUsername = findViewById ( R.id.username );
+        etemail = findViewById ( R.id.email );
+
+        username = sessionManager.getUserDetail ().get ( SessionManager.NAMA );
+        name = sessionManager.getUserDetail ().get ( SessionManager.EMAIL );
+
+        etUsername.setText ( username );
+        etemail.setText ( name );
+    }
+
+    private void moveToLogin() {
+        Intent intent = new Intent ( DashbordActivity.this, LoginActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
     }
 
     public void retrieveData() {

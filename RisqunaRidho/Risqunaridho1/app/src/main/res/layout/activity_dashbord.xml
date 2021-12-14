@@ -26,12 +26,12 @@
         app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
-        android:id="@+id/helo"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/img_profile1"
         android:layout_marginTop="40dp"
-        android:text="HELLO DAVID"
+        android:text="DAVID"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:translationX="120dp"
@@ -39,11 +39,11 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/good"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="Good morning"
+        android:text="Email anda"
         android:textColor="@color/white"
         android:translationX="135dp" />
 
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_produk"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="50dp"
         android:text="Produk" />
 
 
@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_pemesanan"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="165dp"
         android:text="Petugas" />
 
     <ImageButton

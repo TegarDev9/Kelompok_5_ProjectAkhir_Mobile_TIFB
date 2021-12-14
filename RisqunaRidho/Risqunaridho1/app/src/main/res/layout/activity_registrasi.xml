@@ -93,7 +93,7 @@
         android:layout_below="@+id/et_telpUp"
         android:layout_marginTop="10dp"
         android:background="@drawable/custum_text"
-        android:drawableLeft="@drawable/ic_phone"
+        android:drawableLeft="@drawable/ic_role"
         android:drawablePadding="10dp"
         android:fontFamily="@font/regular"
         android:hint="Role"
