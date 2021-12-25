@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.risquna.risqunaridho.Admin.model.login.Login;
 import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
 import com.risquna.risqunaridho.R;
 
@@ -15,6 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -112,6 +116,28 @@ public class petugasActivity extends AppCompatActivity {
             }
         } );
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.action_settings){
+            startActivity(new Intent(this, Login.class));
+        } else if (item.getItemId() == R.id.action_Tambahdata) {
+            startActivity(new Intent(this, RegistrasiActivity.class));
+        } else if (item.getItemId() == R.id.action_updatedata) {
+            startActivity(new Intent(this, updatepetugasActivity.class));
+        }
+
+        return true;
     }
 
 }

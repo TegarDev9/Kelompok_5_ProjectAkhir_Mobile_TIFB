@@ -55,4 +55,14 @@ public interface ApiInterface {
     @GET("Rizquna_Mobile/retrieveproduk.php")
     Call<com.risquna.risqunaridho.produk.ResponseModel> ardRetrieveDataProduk();
 
+    @FormUrlEncoded
+    @POST("Rizquna_Mobile/updatepetugas.php")
+    Call<Register> ardupdatepetugas(
+            @Field("nama") String nama,
+            @Field("notelp") String notelp,
+            @Field("email") String email,
+            @Field("password") String password,
+            @Field("role") int role
+    );
+
 }

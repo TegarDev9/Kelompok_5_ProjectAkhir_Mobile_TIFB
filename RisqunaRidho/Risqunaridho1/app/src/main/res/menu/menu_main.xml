@@ -1,7 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.haerul.Risquna.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/action_search"
         android:orderInCategory="100"
@@ -12,8 +11,19 @@
         android:theme="@android:style/Theme.Holo.Light"/>
 
     <item
+        android:id="@+id/action_Tambahdata"
+        android:orderInCategory="100"
+        android:title="Tambah data"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_updatedata"
+        android:orderInCategory="100"
+        android:title="Update data"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Settings"
+        android:title="Logout"
         app:showAsAction="never" />
 </menu>

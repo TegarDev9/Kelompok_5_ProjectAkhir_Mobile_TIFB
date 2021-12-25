@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu2"
+    android:padding="30dp"
+    tools:context=".Admin.model.register.updatepetugasActivity">
+
+
+
+    <TextView
+        android:id="@+id/TambahPetugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/medium"
+        android:gravity="center_horizontal"
+        android:text="Update Petugas"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_nameUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TambahPetugas"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_profile"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="Name"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_emailUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_nameUp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_email2"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="Email"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_passwordUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_emailUp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawableRight="@drawable/ic_passwordhide"
+        android:drawablePadding="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/regular"
+        android:hint="Password"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_telpUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_passwordUp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="Phone number"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_registerfor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_telpUp"
+
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:text="Register for "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_telpUp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custum_text"
+        android:drawableLeft="@drawable/ic_role"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/regular"
+        android:hint="Role"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_role"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/custum_btn"
+        android:fontFamily="@font/medium"
+        android:text="Update Petugas"
+        android:onClick="onClick"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints,OnClick" />
+
+</RelativeLayout>
