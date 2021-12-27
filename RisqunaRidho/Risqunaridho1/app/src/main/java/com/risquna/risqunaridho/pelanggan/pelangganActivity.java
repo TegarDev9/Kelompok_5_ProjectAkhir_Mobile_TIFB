@@ -4,14 +4,19 @@ import static com.risquna.risqunaridho.R.id.rv_data;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.risquna.risqunaridho.Admin.model.login.Login;
 import com.risquna.risqunaridho.R;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
@@ -71,5 +76,24 @@ public class pelangganActivity extends AppCompatActivity {
         } );
 
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_pelanggan, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.action_settings){
+            startActivity(new Intent (this, Login.class));
+        }
+
+        return true;
     }
 }

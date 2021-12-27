@@ -7,6 +7,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -14,8 +17,10 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
+import com.risquna.risqunaridho.Admin.model.login.Login;
 import com.risquna.risqunaridho.R;
 import com.risquna.risqunaridho.petugas.petugasActivity;
+import com.risquna.risqunaridho.petugas.updatepetugasActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,5 +108,27 @@ public class produkActivity extends AppCompatActivity {
                 pbProduk.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_produck, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.action_settings){
+            startActivity(new Intent(this, Login.class));
+        } else if (item.getItemId() == R.id.action_Tambahdata) {
+            startActivity(new Intent(this, tambahProdukActivity.class));
+        } else if (item.getItemId() == R.id.action_updatedata) {
+            startActivity(new Intent(this, updatepetugasActivity.class));
+        }
+
+        return true;
     }
 }
