@@ -57,12 +57,24 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("Rizquna_Mobile/updatepetugas.php")
-    Call<Register> ardupdatepetugas(
+    Call<com.risquna.risqunaridho.petugas.ResponseModel> ardupdatepetugas(
             @Field("nama") String nama,
             @Field("notelp") String notelp,
             @Field("email") String email,
             @Field("password") String password,
             @Field("role") int role
+    );
+    @FormUrlEncoded
+    @POST("Rizquna_Mobile/delete_petugas.php")
+    Call<com.risquna.risqunaridho.petugas.ResponseModel> ardDeletePetugas(
+            @Field("idpetugas") int idpetugas
+    );
+
+
+    @FormUrlEncoded
+    @POST("Rizquna_Mobile/get_petugas.php")
+    Call<com.risquna.risqunaridho.petugas.ResponseModel> ardGetPetugas(
+            @Field("idpetugas") int idpetugas
     );
 
 }

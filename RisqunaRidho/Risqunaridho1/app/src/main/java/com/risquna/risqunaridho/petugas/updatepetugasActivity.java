@@ -13,6 +13,7 @@ import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
 import com.risquna.risqunaridho.Admin.model.register.Register;
+import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 
 import retrofit2.Call;
@@ -24,12 +25,25 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
     private Button btnSubmit;
     ApiInterface apiInterface;
     private String nama, email, password, notelp, role;
+    private  int xIdpetugas,xrole;
+    private  String xNamapetugas,xNotelp,xEmail,xPassword;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_updatepetugas );
+
+
+        // Menerima data
+        Intent terima = getIntent();
+        xIdpetugas = terima.getIntExtra("xIdpetugas", -1);
+        xNamapetugas = terima.getStringExtra("xNamapetugas");
+        xNotelp = terima.getStringExtra("xNotelp");
+        xEmail = terima.getStringExtra("xEmail");
+        xPassword = terima.getStringExtra("xPassword");
+
+        xrole = terima.getIntExtra("xRole", -1);
         etNama = (EditText) findViewById ( R.id.et_nameUp );
         etTelp = (EditText) findViewById ( R.id.et_telpUp );
         etEmail = (EditText) findViewById ( R.id.et_emailUp );
@@ -38,51 +52,60 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
 
 
         btnSubmit = findViewById ( R.id.btn_submit );
-        btnSubmit.setOnClickListener ( this );
 
+
+
+        etNama.setText(xNamapetugas);
+        etTelp.setText(xNotelp);
+        etEmail.setText(xEmail);
+        etPassword.setText(xPassword);
+        etrole.setText(String.valueOf(xrole));
+
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = etNama.getText().toString();
+                String email = etEmail.getText().toString();
+                String notelp = etTelp.getText().toString();
+                String password = etPassword.getText().toString();
+                int role = Integer.parseInt ( etrole.getText().toString() );
+
+                System.out.println(nama + email +  notelp + password + role);
+
+
+                apiInterface = ApiClient.getClient(updatepetugasActivity.this).create(ApiInterface.class);
+                Call<com.risquna.risqunaridho.petugas.ResponseModel> call = apiInterface.ardupdatepetugas (  nama, email,notelp,password,role);
+                call.enqueue(new Callback<com.risquna.risqunaridho.petugas.ResponseModel>() {
+                    @Override
+
+                    public void onResponse(Call<com.risquna.risqunaridho.petugas.ResponseModel> call, Response<com.risquna.risqunaridho.petugas.ResponseModel> response) {
+                        int respon = response.body().getKode ();
+                        if(respon == 1){
+                            Toast.makeText(updatepetugasActivity.this, response.body().getPesan (), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(updatepetugasActivity.this, DashbordActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(updatepetugasActivity.this, response.body().getPesan (), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseModel> call, Throwable t) {
+                        Toast.makeText(updatepetugasActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+    }
+
+    private void updateData() {
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId ()) {
-            case R.id.btn_submit:
-                nama = etNama.getText ().toString ();
-                notelp = etTelp.getText ().toString ();
-                email = etEmail.getText ().toString ();
-                password = etPassword.getText ().toString ();
-                role = etrole.getText ().toString ();
-
-                updatepetugas ( nama, notelp, email, password, Integer.parseInt ( role ) );
-                break;
-
-            default:
-
-
-        }
-    }
-
-
-    private void updatepetugas(String nama, String notelp, String email, String password, int role) {
-        apiInterface = ApiClient.getClient ( updatepetugasActivity.this ).create ( ApiInterface.class );
-        Call<Register> call = apiInterface.ardupdatepetugas ( nama, notelp, email, password, role );
-        call.enqueue ( new Callback<Register> () {
-            @Override
-            public void onResponse(Call<Register> call, Response<Register> response) {
-                if (response.body () != null && response.isSuccessful () && response.body ().isCode ()) {
-                    Toast.makeText ( updatepetugasActivity.this, response.body ().getStatus (), Toast.LENGTH_SHORT ).show ();
-                    Intent intent = new Intent ( updatepetugasActivity.this, LoginActivity.class );
-                    startActivity ( intent );
-                    finish ();
-                } else {
-                    Toast.makeText ( updatepetugasActivity.this, response.body ().getStatus (), Toast.LENGTH_SHORT ).show ();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Register> call, Throwable t) {
-                Toast.makeText ( updatepetugasActivity.this, t.getLocalizedMessage (), Toast.LENGTH_SHORT ).show ();
-            }
-        } );
+    public void onClick(View v) {
 
 
     }

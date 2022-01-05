@@ -2,8 +2,8 @@ package com.risquna.risqunaridho.petugas;
 
 public class DataPetugas {
 
-    private int idpetugas;
-    private String nama, notelp, email, password, role;
+    private int idpetugas,role;
+    private String nama, notelp, email, password;
 
     public int getIdpetugas() {
         return idpetugas;
@@ -11,6 +11,14 @@ public class DataPetugas {
 
     public void setIdpetugas(int idpetugas) {
         this.idpetugas = idpetugas;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 
     public String getNama() {
@@ -43,14 +51,6 @@ public class DataPetugas {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 }
 

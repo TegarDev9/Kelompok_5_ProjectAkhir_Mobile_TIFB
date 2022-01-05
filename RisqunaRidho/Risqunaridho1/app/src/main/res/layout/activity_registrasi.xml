@@ -100,8 +100,6 @@
         android:textSize="15sp" />
 
 
-
-
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
@@ -110,8 +108,8 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
-        android:text="Next"
         android:onClick="onClick"
+        android:text="Tambah Petugas"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp" />

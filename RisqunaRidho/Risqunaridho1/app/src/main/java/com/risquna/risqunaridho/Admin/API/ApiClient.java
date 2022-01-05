@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     //membuat base url
-    private static final String BASE_URL = "http://192.168.13.75:80";
+    private static final String BASE_URL = "http://192.168.88.75:80";
     //membuat variable retrofit
     private static Retrofit retrofit;
 
@@ -31,4 +31,17 @@ public class ApiClient {
         }
         return retrofit;
     }
+
+
+    public static Retrofit koneksi() {
+        if (retrofit == null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+
+        return retrofit;
+    }
+
 }
