@@ -11,19 +11,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     //membuat base url
-    private static final String BASE_URL = "http://192.168.88.75:80";
+    //private static final String BASE_URL = "http://192.168.88.75:80";
+    //private static final String BASE_URL = "http://192.168.43.195";
+    public static final String BASE_URL1 = "http://ws-tif.com/rizquna-ridho-store/";
+
+
     //membuat variable retrofit
     private static Retrofit retrofit;
 
     //membuat function dengan tipe retrofit
-    //private static RetroServer mInstance;
     public static Retrofit getClient(Context context) {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logging).addInterceptor(new ChuckInterceptor(context)).build();
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(BASE_URL1)
                     //mengkonvert data menjadi json agar dapat dikenali android
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
@@ -36,7 +39,7 @@ public class ApiClient {
     public static Retrofit koneksi() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(BASE_URL1)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

@@ -42,8 +42,8 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
         xNotelp = terima.getStringExtra("xNotelp");
         xEmail = terima.getStringExtra("xEmail");
         xPassword = terima.getStringExtra("xPassword");
-
         xrole = terima.getIntExtra("xRole", -1);
+        System.out.println("terima id : " + xIdpetugas);
         etNama = (EditText) findViewById ( R.id.et_nameUp );
         etTelp = (EditText) findViewById ( R.id.et_telpUp );
         etEmail = (EditText) findViewById ( R.id.et_emailUp );
@@ -75,7 +75,7 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
 
 
                 apiInterface = ApiClient.getClient(updatepetugasActivity.this).create(ApiInterface.class);
-                Call<com.risquna.risqunaridho.petugas.ResponseModel> call = apiInterface.ardupdatepetugas (  nama, email,notelp,password,role);
+                Call<com.risquna.risqunaridho.petugas.ResponseModel> call = apiInterface.ardupdatepetugas (  xIdpetugas, nama, email,notelp,password,role);
                 call.enqueue(new Callback<com.risquna.risqunaridho.petugas.ResponseModel>() {
                     @Override
 

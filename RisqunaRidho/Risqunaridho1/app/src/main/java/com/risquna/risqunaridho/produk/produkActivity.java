@@ -72,7 +72,7 @@ public class produkActivity extends AppCompatActivity {
         });
     }
 
-    private void retrieveProduk() {
+    public void retrieveProduk() {
         pbProduk.setVisibility(View.VISIBLE);
         //memanggil API
         ApiInterface ardData = ApiClient.getClient ( produkActivity.this).create ( ApiInterface.class );
@@ -108,27 +108,5 @@ public class produkActivity extends AppCompatActivity {
                 pbProduk.setVisibility(View.INVISIBLE);
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_produck, menu);
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==R.id.action_settings){
-            startActivity(new Intent(this, Login.class));
-        } else if (item.getItemId() == R.id.action_Tambahdata) {
-            startActivity(new Intent(this, tambahProdukActivity.class));
-        } else if (item.getItemId() == R.id.action_updatedata) {
-            startActivity(new Intent(this, updatepetugasActivity.class));
-        }
-
-        return true;
     }
 }

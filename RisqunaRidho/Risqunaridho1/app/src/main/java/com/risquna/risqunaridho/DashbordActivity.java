@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,9 +31,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashbordActivity extends AppCompatActivity {
-    TextView etUsername, etemail;
+    TextView etUsername, etemail, tvJmluser, tvJmlPendapatan, tvJmlPesananBaru, tvJmlSendingPackage, tvJmlPesananSelesai;
     SessionManager sessionManager;
-    String username, name;
+    String username, email;
+    Button btnLogout;
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -51,7 +53,11 @@ public class DashbordActivity extends AppCompatActivity {
         lmData = new LinearLayoutManager ( this, LinearLayoutManager.VERTICAL, false );
         rvData.setLayoutManager ( lmData );
         retrieveData ();
-
+        getJumlahUser();
+        getJumlahPendapatan();
+        getJumlahPesananBaru();
+        getJumlahSendingPackage();
+        getJumlahPesananSelesai();
 
         btnproduk.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -84,12 +90,18 @@ public class DashbordActivity extends AppCompatActivity {
 
         etUsername = findViewById ( R.id.username );
         etemail = findViewById ( R.id.email );
+        tvJmluser = findViewById(R.id.tv_jmlUser);
+        tvJmlPendapatan = findViewById(R.id.tv_jmlPendapatan);
+        tvJmlPesananBaru = findViewById(R.id.tv_jmlPesananBaru);
+        tvJmlSendingPackage = findViewById(R.id.tv_jmlsendingPackage);
+        tvJmlPesananSelesai = findViewById(R.id.tv_jmlPesananSelesai);
 
         username = sessionManager.getUserDetail ().get ( SessionManager.NAMA );
-        name = sessionManager.getUserDetail ().get ( SessionManager.EMAIL );
+        System.out.println("HHHH : " + username );
+        email = sessionManager.getUserDetail ().get ( SessionManager.EMAIL );
 
         etUsername.setText ( username );
-        etemail.setText ( name );
+        etemail.setText ( email );
     }
 
     private void moveToLogin() {
@@ -124,6 +136,101 @@ public class DashbordActivity extends AppCompatActivity {
                 Toast.makeText ( DashbordActivity.this, "gagal Menghubungkan Server" + t.getMessage (), Toast.LENGTH_SHORT ).show ();
             }
         } );
+    }
+
+    private void getJumlahUser(){
+        ApiInterface ardProduk = ApiClient.getClient(DashbordActivity.this).create(ApiInterface.class);
+        Call<String> jumlah = ardProduk.ardGetJumlahUser();
+        jumlah.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //Toast.makeText(getApplicationContext(), response.body(), Toast.LENGTH_SHORT).show();
+                String total = response.body();
+                tvJmluser.setText(total);
+
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    private void getJumlahPendapatan(){
+        ApiInterface ardPendapatan = ApiClient.getClient(DashbordActivity.this).create(ApiInterface.class);
+        Call<String> jumlah = ardPendapatan.ardGetJumlahPendapatan();
+        jumlah.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //Toast.makeText(getApplicationContext(), response.body(), Toast.LENGTH_SHORT).show();
+                String total = response.body();
+                tvJmlPendapatan.setText(total);
+
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    private void getJumlahPesananBaru(){
+        ApiInterface ardBaru = ApiClient.getClient(DashbordActivity.this).create(ApiInterface.class);
+        Call<String> jumlah = ardBaru.ardGetJumlahPesananBaru();
+        jumlah.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //Toast.makeText(getApplicationContext(), response.body(), Toast.LENGTH_SHORT).show();
+                String total = response.body();
+                tvJmlPesananBaru.setText(total);
+
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    private void getJumlahSendingPackage(){
+        ApiInterface ardSending = ApiClient.getClient(DashbordActivity.this).create(ApiInterface.class);
+        Call<String> jumlah = ardSending.ardGetJumlahSendingPackage();
+        jumlah.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //Toast.makeText(getApplicationContext(), response.body(), Toast.LENGTH_SHORT).show();
+                String total = response.body();
+                tvJmlSendingPackage.setText(total);
+
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    private void getJumlahPesananSelesai(){
+        ApiInterface ardSelesai = ApiClient.getClient(DashbordActivity.this).create(ApiInterface.class);
+        Call<String> jumlah = ardSelesai.ardGetJumlahPesananComplate();
+        jumlah.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //Toast.makeText(getApplicationContext(), response.body(), Toast.LENGTH_SHORT).show();
+                String total = response.body();
+                tvJmlPesananSelesai.setText(total);
+
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
 
     }
 }

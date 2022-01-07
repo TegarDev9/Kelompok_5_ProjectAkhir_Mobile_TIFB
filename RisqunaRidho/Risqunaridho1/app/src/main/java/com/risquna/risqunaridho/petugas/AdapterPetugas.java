@@ -50,7 +50,7 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
 
         holder.tvidpetugas.setText ( String.valueOf ( dm.getIdpetugas ()
         ) );
-        holder.tvnama.setText ( dm.getNama () );
+        holder.tvnama.setText ( dm.getNama() );
         holder.tvnotelp.setText ( dm.getNotelp () );
         holder.tvemail.setText ( dm.getEmail () );
         holder.tvpassword.setText ( dm.getPassword () );
@@ -95,7 +95,8 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
                         ((petugasActivity) ctx).retrieveData ();
                     } );
                     dialogPesan.setNegativeButton ( "Edit", (dialog, which) -> {
-                        getProduk ();
+                        getPetugas ();
+                        System.out.println("idpetugas" + idpetugas);
                     } );
                     dialogPesan.show ();
 
@@ -124,7 +125,7 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
             } );
         }
 
-        private void getProduk() {
+        private void getPetugas() {
             ApiInterface ardData = ApiClient.koneksi ().create ( ApiInterface.class );
             Call<com.risquna.risqunaridho.petugas.ResponseModel> getData = ardData.ardGetPetugas ( idpetugas );
 
@@ -136,7 +137,7 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
                     listUpdate = response.body ().getData ();
 
                     int varIdpetugas = listUpdate.get ( 0 ).getIdpetugas ();
-                    String varNama = listUpdate.get ( 0 ).getNama ();
+                    String varNama = listUpdate.get ( 0 ).getNama();
                     String varNotelp = listUpdate.get ( 0 ).getNotelp ();
                     String varEmail = listUpdate.get ( 0 ).getEmail ();
                     String varPassword = listUpdate.get ( 0 ).getPassword ();
@@ -145,7 +146,7 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
 
                     //Mengirim data
                     Intent kirim = new Intent ( itemView.getContext (), updatepetugasActivity.class );
-                    kirim.putExtra ( "xIdproduk", varIdpetugas );
+                    kirim.putExtra ( "xIdpetugas", varIdpetugas );
                     kirim.putExtra ( "xNamapetugas", varNama );
                     kirim.putExtra ( "xNotelp", varNotelp );
                     kirim.putExtra ( "xEmail", varEmail );
@@ -162,9 +163,8 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
         }
 
 
-
     }
 
 
-    }
+}
 

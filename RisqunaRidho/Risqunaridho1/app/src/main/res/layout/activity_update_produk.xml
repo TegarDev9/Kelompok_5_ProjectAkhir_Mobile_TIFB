@@ -7,26 +7,38 @@
     android:layout_height="match_parent"
     android:background="@color/abu2"
     android:padding="16dp"
-    tools:context=".produk.tambahProdukActivity">
+    tools:context=".produk.UpdateProdukActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/picture"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
 
     <RelativeLayout
         android:id="@+id/layoutData"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picture"
+        android:layout_marginTop="20dp">
 
+        <!--  ID Kategori  -->
         <Spinner
             android:id="@+id/sp_idkategori"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="-3dp"
-            android:background="@color/white"
-            android:hint="Id kategori"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custum_text"
             android:fontFamily="sans-serif-light"
+            android:hint="Id kategori"
             android:inputType="textPersonName"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp" />
 
+        <!--  Nama Produk  -->
         <EditText
             android:id="@+id/et_namaProduk"
             android:layout_width="match_parent"
@@ -39,6 +51,7 @@
             android:hint="Nama Produk"
             android:textSize="15sp" />
 
+        <!--  Deskripsi  -->
         <EditText
             android:id="@+id/et_deskripsi"
             android:layout_width="match_parent"
@@ -50,6 +63,7 @@
             android:hint="Deskripsi"
             android:textSize="15sp" />
 
+        <!--  Rating  -->
         <EditText
             android:id="@+id/et_rating"
             android:layout_width="match_parent"
@@ -57,10 +71,11 @@
             android:layout_below="@+id/et_deskripsi"
             android:layout_marginTop="10dp"
             android:background="@drawable/custum_text"
-            android:textSize="15sp"
             android:fontFamily="@font/regular"
-            android:hint="Rating" />
+            android:hint="Rating"
+            android:textSize="15sp" />
 
+        <!--  Harga Before  -->
         <EditText
             android:id="@+id/et_hargaBefore"
             android:layout_width="match_parent"
@@ -73,7 +88,7 @@
             android:hint="Harga Before"
             android:textSize="15sp" />
 
-
+        <!--  Harga After  -->
         <EditText
             android:id="@+id/et_hargaAfter"
             android:layout_width="match_parent"
@@ -86,8 +101,7 @@
             android:hint="Harga After"
             android:textSize="15sp" />
 
-
-
+        <!--  Harga Stok  -->
         <EditText
             android:id="@+id/et_stok"
             android:layout_width="match_parent"
@@ -100,18 +114,19 @@
             android:hint="Harga Before"
             android:textSize="15sp" />
 
+        <!--  Button Save  -->
         <Button
-            android:id="@+id/btn_submit"
+            android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/et_stok"
             android:layout_marginTop="25dp"
             android:background="@drawable/custum_btn"
             android:fontFamily="@font/medium"
-            android:text="Submit"
+            android:text="Save"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15sp" />
-    </RelativeLayout>
 
+    </RelativeLayout>
 </RelativeLayout>

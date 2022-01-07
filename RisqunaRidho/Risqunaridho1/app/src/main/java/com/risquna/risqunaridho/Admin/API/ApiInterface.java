@@ -12,9 +12,10 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/register.php")
+    @POST("risqunastore/api_register.php")
     Call<Register> ardRegister(
-            @Field("nama") String nama,
+
+            @Field("namapetugas") String nama,
             @Field("notelp") String notelp,
             @Field("email") String email,
             @Field("password") String password,
@@ -22,7 +23,7 @@ public interface ApiInterface {
     );
 
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/Login.php")
+    @POST("risqunastore/api_Login.php")
     Call<Login> ardLogin(
             @Field("email") String email,
             @Field("password") String password
@@ -30,11 +31,11 @@ public interface ApiInterface {
 
     //Pelanggan
 
-    @GET("Rizquna_Mobile/retrieveusers.php")
+    @GET("risqunastore/api_retrieveusers.php")
     Call<ResponseModel> ardRetrieveData();
 
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/create.php")
+    @POST("risqunastore/api_create.php")
     Call<ResponseModel> ardCreateData(
             @Field ( "userid" ) int userid,
             @Field ( "nama" ) String nama,
@@ -46,35 +47,88 @@ public interface ApiInterface {
 
     //petugas
 
-    @GET("Rizquna_Mobile/retrievepetugas.php")
+    @GET("risqunastore/api_retrievepetugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardRetrieveDatapetugas();
 
-    @GET("Rizquna_Mobile/retrievepemesanan.php")
+    @GET("risqunastore/api_retrievepemesanan.php")
     Call<com.risquna.risqunaridho.pemesanan.ResponseModel> ardRetrieveDataPemesanan();
 
-    @GET("Rizquna_Mobile/retrieveproduk.php")
-    Call<com.risquna.risqunaridho.produk.ResponseModel> ardRetrieveDataProduk();
-
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/updatepetugas.php")
+    @POST("risqunastore/api_updatepetugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardupdatepetugas(
-            @Field("nama") String nama,
+            @Field ( "idpetugas" ) int idpetugas,
+            @Field("nama") String namapetugas,
             @Field("notelp") String notelp,
             @Field("email") String email,
             @Field("password") String password,
             @Field("role") int role
     );
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/delete_petugas.php")
+    @POST("risqunastore/api_delete_petugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardDeletePetugas(
             @Field("idpetugas") int idpetugas
     );
 
 
     @FormUrlEncoded
-    @POST("Rizquna_Mobile/get_petugas.php")
+    @POST("risqunastore/api_get_petugas.php")
     Call<com.risquna.risqunaridho.petugas.ResponseModel> ardGetPetugas(
             @Field("idpetugas") int idpetugas
     );
 
+    //Produk
+    @GET("risqunastore/api_retrieveproduk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardRetrieveDataProduk();
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_add_produk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardCreateProduk(
+            @Field ( "idkategori" ) int idkategori,
+            @Field ( "namaproduk" ) String namaproduk,
+            @Field ( "deskripsi" ) String deskripsi,
+            @Field ( "rating" ) String rating,
+            @Field ( "hargabefore" ) String hargabefore,
+            @Field ( "hargaafter" ) String hargaafter,
+            @Field ( "stok" ) String stok
+    );
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_update_produk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardUpdateProduk(
+            @Field("idproduk") int idproduk,
+            @Field ( "idkategori" ) int idkategori,
+            @Field ( "namaproduk" ) String namaproduk,
+            @Field ( "deskripsi" ) String deskripsi,
+            @Field ( "rating" ) String rating,
+            @Field ( "hargabefore" ) String hargabefore,
+            @Field ( "hargaafter" ) String hargaafter,
+            @Field ( "stok" ) String stok
+    );
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_delete_produk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardDeleteProduk(
+            @Field("idproduk") int idproduk
+    );
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_get_produk.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardGetProduk(
+            @Field("idproduk") int idproduk
+    );
+
+    @GET("risqunastore/api_jumlah_user.php")
+    Call<String>ardGetJumlahUser();
+
+    @GET("risqunastore/api_jumlah_pendapatan.php")
+    Call<String>ardGetJumlahPendapatan();
+
+    @GET("risqunastore/api_jumlah_pesananbaru.php")
+    Call<String>ardGetJumlahPesananBaru();
+
+    @GET("risqunastore/api_jumlah_sendingpackage.php")
+    Call<String>ardGetJumlahSendingPackage();
+
+    @GET("risqunastore/api_jumlah_pesanancomplate.php")
+    Call<String>ardGetJumlahPesananComplate();
 }

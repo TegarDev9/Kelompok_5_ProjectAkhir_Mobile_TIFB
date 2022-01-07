@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
+import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 
 import retrofit2.Call;
@@ -76,7 +77,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
             public void onResponse(Call<Register> call, Response<Register> response) {
                 if(response.body() != null && response.isSuccessful() && response.body().isCode()){
                     Toast.makeText(RegistrasiActivity.this, response.body().getStatus(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegistrasiActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(RegistrasiActivity.this, DashbordActivity.class);
                     startActivity(intent);
                     finish();
                 } else {

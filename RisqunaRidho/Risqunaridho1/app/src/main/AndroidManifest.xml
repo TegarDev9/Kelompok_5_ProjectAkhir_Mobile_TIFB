@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisqunaRidhoStore"
         android:usesCleartextTraffic="true">
-
-
+        <activity
+            android:name=".produk.UpdateProdukActivity"
+            android:exported="true" />
         <activity
             android:name=".petugas.updatepetugasActivity"
             android:exported="true" />
@@ -33,11 +34,6 @@
             android:exported="true" />
         <activity
             android:name=".DashbordActivity"
-            android:exported="true"
-            android:label="@string/title_activity_dashbord"
-            android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
-        <activity
-            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +41,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:label="@string/title_activity_dashbord"
+            android:theme="@style/Theme.RisqunaRidhoStore.NoActionBar" />
         <activity android:name=".Admin.model.login.LoginActivity" />
         <activity android:name=".Admin.model.register.RegistrasiActivity" />
     </application>

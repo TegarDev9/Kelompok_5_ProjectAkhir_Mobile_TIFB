@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/drawable-v24/ic_warning.xml" value="0.12129629629629629" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_dashbord.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_pelanggan.xml" value="0.10371376811594203" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_petugas.xml" value="0.1" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_produk.xml" value="0.2" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_registrasi.xml" value="0.1" />
-        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_tambah_produk.xml" value="0.33" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_tambah_produk.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_update_produk.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/activity_updatepetugas.xml" value="0.1644021739130435" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/card_item.xml" value="0.5" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/card_pemesanan.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester 3/Kelompok_5_ProjectAkhir_Mobile_TIFB/RisqunaRidho/Risqunaridho1/app/src/main/res/layout/card_petugas.xml" value="0.19653179190751446" />

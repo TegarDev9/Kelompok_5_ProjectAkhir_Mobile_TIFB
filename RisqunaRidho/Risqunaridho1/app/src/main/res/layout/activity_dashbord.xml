@@ -25,6 +25,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:text="Log Out"
+        />
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
@@ -175,11 +182,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_pelanggan"
                 android:layout_width="206dp"
                 android:layout_height="131dp"
                 android:elevation="10dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="10dp"
+                android:layout_marginRight="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -215,6 +222,131 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pesananBaru"
+                android:layout_width="206dp"
+                android:layout_height="131dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_pesananBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/tv_pesananBaru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Pesanan Baru"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jmlPesananBaru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_sendingPackage"
+                android:layout_width="206dp"
+                android:layout_height="131dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_sendingPackage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/tv_sendingPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Pesanan Dikirim"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jmlsendingPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pesananSelesai"
+                android:layout_width="206dp"
+                android:layout_height="131dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_pesananSelesai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/tv_pesananSelesai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Pesanan Selesai"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jmlPesananSelesai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -227,7 +359,6 @@
         android:text="List Pesananan"
         android:textSize="15dp"
         android:textStyle="bold" />
-
 
     <ScrollView
         android:layout_width="match_parent"
