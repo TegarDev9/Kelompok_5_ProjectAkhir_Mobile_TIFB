@@ -64,15 +64,13 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
         holder.tvtgl.setText(dm.getTgl());
         holder.tvstok.setText(String.valueOf(dm.getStok()));
 
-        RequestOptions requestOptions = new RequestOptions();
-
-        String urlGambar = "risqunastore/" + dm.getGambar();
+        String urlGambar = ApiClient.BASE_URL + "risqunastore/" + dm.getGambar();
         Glide.with(ctx)
-                .load(ApiClient.BASE_URL1 +urlGambar)// load gambar
+                .load(urlGambar)// load gambar
                 .placeholder(R.drawable.logo)// sebelum load gambar dari data
                 .error(R.drawable.ic_warning) // load error
                 .into(holder.imgproduk);
-        //Toast.makeText(ctx, "gambar :    " + ApiClient.BASE_URL1 +urlGambar, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(ctx, "gambar :    " + ApiClient.BASE_URL +urlGambar, Toast.LENGTH_SHORT).show();
     }
 
     @Override

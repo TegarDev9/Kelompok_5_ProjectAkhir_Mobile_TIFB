@@ -18,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.Admin.model.login.Login;
+import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 import com.risquna.risqunaridho.petugas.petugasActivity;
 import com.risquna.risqunaridho.petugas.updatepetugasActivity;
@@ -108,5 +109,12 @@ public class produkActivity extends AppCompatActivity {
                 pbProduk.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    public void actionBack(View view) {
+        Intent intent = new Intent ( produkActivity.this, DashbordActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
     }
 }

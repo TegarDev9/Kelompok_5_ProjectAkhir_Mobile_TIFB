@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="15dp"
     android:id="@+id/cardProduk"
     app:cardCornerRadius="5dp"
     android:layout_margin="10dp">
@@ -51,11 +51,28 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_deskripsi"
+            android:id="@+id/deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_stok"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/img_produk"
+            android:layout_weight="1"
+            android:text="Deskripsi :"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deskripsi"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_produk"
+            android:layout_marginTop="3dp"
             android:text="Deskripsi"
-            android:visibility="gone"/>
+            android:textColor="@color/black"
+            android:textSize="16sp" />/>
 
         <TextView
             android:id="@+id/tv_rating"
@@ -87,12 +104,13 @@
             android:id="@+id/tv_hargaAfter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_namaProduk"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/harga"
+            android:layout_marginTop="3dp"
             android:text="Harga"
             android:textColor="@color/black"
-            android:layout_below="@+id/tv_namaProduk"
-            android:layout_toRightOf="@+id/harga"
-            android:layout_marginLeft="15dp"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_tgl"
@@ -109,6 +127,7 @@
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/img_produk"
             android:layout_weight="1"
+            android:layout_marginTop="3dp"
             android:text="Stok :"
             android:textColor="@color/black"
             android:textSize="16sp" />

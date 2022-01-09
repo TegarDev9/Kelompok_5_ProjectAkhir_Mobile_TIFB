@@ -25,7 +25,7 @@ public class tambahProdukActivity extends AppCompatActivity {
 
 
     private EditText etNama, etDeskripsi, etRating, etBefore, etAfter, etTanggal, etStok;
-    private String namaproduk, picture, deskripsi, tgl;
+    private String namaproduk,  deskripsi;
     private String rating = "";
     private String hargabefore;
     private String hargaafter;
@@ -33,7 +33,6 @@ public class tambahProdukActivity extends AppCompatActivity {
     private int id_kategori;
     private Spinner sp_idkategori;
     private String[] kategori = {"kerudung", "gamis"};
-    //    private CircleImageView;
     private ApiInterface apiInterface;
     private Button btn_submit;
 
@@ -65,10 +64,10 @@ public class tambahProdukActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView adapterView, View view, int i, long l) {
                 if (adapter.getItem(i) == kategori[0]) {
                     id_kategori = 1;
-                    Toast.makeText(tambahProdukActivity.this, Integer.toString(id_kategori), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(tambahProdukActivity.this, Integer.toString(id_kategori), Toast.LENGTH_SHORT).show();
                 } else if (adapter.getItem(i) == kategori[1]) {
                     id_kategori = 2;
-                    Toast.makeText(tambahProdukActivity.this, Integer.toString(id_kategori), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(tambahProdukActivity.this, Integer.toString(id_kategori), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(tambahProdukActivity.this, "Kategori wajib diisi!", Toast.LENGTH_SHORT).show();
                 }
@@ -101,7 +100,7 @@ public class tambahProdukActivity extends AppCompatActivity {
                 int respon = response.body().getCode();
                 if (respon == 1) {
                     Toast.makeText(tambahProdukActivity.this, response.body().getStatus(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(tambahProdukActivity.this, DashbordActivity.class);
+                    Intent intent = new Intent(tambahProdukActivity.this, produkActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -116,5 +115,12 @@ public class tambahProdukActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void actionBack(View view) {
+        Intent intent = new Intent ( tambahProdukActivity.this, produkActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
     }
 }

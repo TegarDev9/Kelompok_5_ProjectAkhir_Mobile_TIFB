@@ -15,6 +15,9 @@
         android:theme="@style/Theme.RisqunaRidhoStore"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".produk.UpdateGambarProdukActivity"
+            android:exported="true" />
+        <activity
             android:name=".produk.UpdateProdukActivity"
             android:exported="true" />
         <activity

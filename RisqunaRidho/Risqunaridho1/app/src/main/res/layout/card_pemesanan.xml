@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="6dp"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp"
     app:cardCornerRadius="5dp"
     android:background="@drawable/custum_text">
 
@@ -12,16 +13,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="6dp">
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tv_idcard"
             android:layout_width="40dp"
-            android:textColor="@color/abu6"
+            android:textColor="@color/abu4"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="01"
-            android:textSize="18sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/tv_code"
@@ -32,7 +33,7 @@
             android:maxLines="2"
             android:fontFamily="@font/medium"
             android:text="Code"
-            android:textSize="15dp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
@@ -46,7 +47,7 @@
             android:textColor="@color/hijau2"
             android:shadowColor="?android:attr/textColorLink"
             android:text="Menunggu Konfirmasi"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
 
     </RelativeLayout>

@@ -8,16 +8,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Admin.model.register.RegistrasiActivity">
 
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="actionBack"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/ic_back" />
+
     <TextView
         android:id="@+id/TambahPetugas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/back"
         android:fontFamily="@font/medium"
-        android:gravity="center_horizontal"
         android:text="Tambah Petugas"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
@@ -25,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TambahPetugas"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_profile"
         android:drawablePadding="10dp"
@@ -54,11 +64,10 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_password"
-        android:drawableRight="@drawable/ic_passwordhide"
         android:drawablePadding="10dp"
-        android:textSize="15sp"
         android:fontFamily="@font/regular"
-        android:hint="Password" />
+        android:hint="Password"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/et_telpUp"

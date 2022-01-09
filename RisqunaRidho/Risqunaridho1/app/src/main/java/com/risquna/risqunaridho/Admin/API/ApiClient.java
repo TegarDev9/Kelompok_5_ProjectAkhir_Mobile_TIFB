@@ -13,11 +13,9 @@ public class ApiClient {
     //membuat base url
     //private static final String BASE_URL = "http://192.168.88.75:80";
     //private static final String BASE_URL = "http://192.168.43.195";
-    public static final String BASE_URL1 = "http://ws-tif.com/rizquna-ridho-store/";
-
-
-    //membuat variable retrofit
+    public static final String BASE_URL = "http://ws-tif.com/rizquna-ridho-store/";
     private static Retrofit retrofit;
+    private static ApiClient mInstance;
 
     //membuat function dengan tipe retrofit
     public static Retrofit getClient(Context context) {
@@ -26,7 +24,7 @@ public class ApiClient {
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logging).addInterceptor(new ChuckInterceptor(context)).build();
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL1)
+                    .baseUrl(BASE_URL)
                     //mengkonvert data menjadi json agar dapat dikenali android
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
@@ -35,11 +33,10 @@ public class ApiClient {
         return retrofit;
     }
 
-
     public static Retrofit koneksi() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL1)
+                    .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
@@ -47,4 +44,22 @@ public class ApiClient {
         return retrofit;
     }
 
+    private ApiClient(){
+        retrofit=new Retrofit.Builder().
+                baseUrl(BASE_URL).
+                addConverterFactory(GsonConverterFactory.create()).
+                build();
+    }
+
+    public static synchronized ApiClient getInstance(){
+        if (mInstance==null){
+            mInstance=new ApiClient();
+        }
+        return mInstance;
+    }
+
+    public ApiInterface getApi(){
+        return retrofit.create(ApiInterface.class);
+
+    }
 }

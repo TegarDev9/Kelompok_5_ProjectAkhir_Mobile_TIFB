@@ -9,8 +9,39 @@
     android:padding="16dp"
     tools:context=".produk.produkActivity">
 
+    <LinearLayout
+        android:id="@+id/lback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="actionBack"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvSaldoSekarang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="6dp"
+            android:text="Data Produk"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/srl_produk"
+        android:layout_below="@+id/lback"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -34,6 +65,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="32dp"
-        android:src="@drawable/ic_barang"/>
+        android:background="#2B8BEE"
+        android:backgroundTint="#2B8BEE"
+        app:rippleColor="@color/white"
+        android:src="@drawable/ic_add"/>
 
 </RelativeLayout>

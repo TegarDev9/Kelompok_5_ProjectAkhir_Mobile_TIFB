@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.risquna.risqunaridho.Admin.model.login.Login;
 import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
+import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 
 
@@ -140,4 +141,10 @@ public class petugasActivity extends AppCompatActivity {
         return true;
     }
 
+    public void actionBack(View view) {
+        Intent intent = new Intent ( petugasActivity.this, DashbordActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
+    }
 }

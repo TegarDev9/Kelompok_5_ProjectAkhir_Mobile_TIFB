@@ -1,9 +1,11 @@
 package com.risquna.risqunaridho;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +36,6 @@ public class DashbordActivity extends AppCompatActivity {
     TextView etUsername, etemail, tvJmluser, tvJmlPendapatan, tvJmlPesananBaru, tvJmlSendingPackage, tvJmlPesananSelesai;
     SessionManager sessionManager;
     String username, email;
-    Button btnLogout;
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -45,10 +46,14 @@ public class DashbordActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_dashbord );
 
+        SessionManager sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
 
         ImageButton btnproduk = findViewById ( R.id.id_produk );
         ImageButton btnpemesanan = findViewById ( R.id.id_pemesanan );
         ImageButton btnpelanggan = findViewById ( R.id.id_pelanggan );
+        Button btnLogout = findViewById(R.id.btn_logout);
+
         rvData = findViewById ( R.id.rv_data );
         lmData = new LinearLayoutManager ( this, LinearLayoutManager.VERTICAL, false );
         rvData.setLayoutManager ( lmData );
@@ -83,6 +88,38 @@ public class DashbordActivity extends AppCompatActivity {
             }
         } );
 
+        SessionManager finalSessionManager = sessionManager;
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialogPesan = new AlertDialog.Builder(DashbordActivity.this);
+                dialogPesan.setTitle("Perhatian!");
+                dialogPesan.setIcon(R.drawable.ic_warning);
+                dialogPesan.setMessage("Apakah anda yakin ingin keluar?");
+                dialogPesan.setCancelable(true);
+
+                dialogPesan.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finalSessionManager.logoutSession();
+                        Intent intent = new Intent (DashbordActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                        Toast.makeText(DashbordActivity.this, "Anda berhasil keluar!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                dialogPesan.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                dialogPesan.show();
+            }
+
+        });
+
         sessionManager = new SessionManager ( DashbordActivity.this );
         if (!sessionManager.isLoggedIn ()) {
             moveToLogin ();
@@ -95,6 +132,8 @@ public class DashbordActivity extends AppCompatActivity {
         tvJmlPesananBaru = findViewById(R.id.tv_jmlPesananBaru);
         tvJmlSendingPackage = findViewById(R.id.tv_jmlsendingPackage);
         tvJmlPesananSelesai = findViewById(R.id.tv_jmlPesananSelesai);
+        btnLogout = findViewById(R.id.btn_logout);
+
 
         username = sessionManager.getUserDetail ().get ( SessionManager.NAMA );
         System.out.println("HHHH : " + username );
@@ -231,6 +270,9 @@ public class DashbordActivity extends AppCompatActivity {
 
             }
         });
-
     }
+
+
+
+
 }

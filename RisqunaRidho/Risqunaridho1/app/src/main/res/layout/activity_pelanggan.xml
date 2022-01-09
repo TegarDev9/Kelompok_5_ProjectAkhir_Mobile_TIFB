@@ -9,8 +9,38 @@
     android:padding="16dp"
     tools:context=".pelanggan.pelangganActivity">
 
+    <LinearLayout
+        android:id="@+id/lback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="actionBack"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="6dp"
+            android:text="Data Pelanggan"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data"
+        android:layout_below="@+id/lback"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/card_item" />

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.risquna.risqunaridho.Admin.model.login.Login;
+import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,11 +18,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.R;
+import com.risquna.risqunaridho.produk.produkActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,5 +98,12 @@ public class pelangganActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void actionBack(View view) {
+        Intent intent = new Intent ( pelangganActivity.this, DashbordActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
     }
 }

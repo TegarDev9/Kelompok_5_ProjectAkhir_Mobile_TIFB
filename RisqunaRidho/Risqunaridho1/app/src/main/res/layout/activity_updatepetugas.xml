@@ -6,29 +6,44 @@
     android:layout_height="match_parent"
     android:background="@color/abu2"
     android:padding="30dp"
-    tools:context=".Admin.model.register.updatepetugasActivity">
+    tools:context=".petugas.updatepetugasActivity">
 
 
-
-    <TextView
-        android:id="@+id/TambahPetugas"
+    <LinearLayout
+        android:id="@+id/lback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/medium"
-        android:gravity="center_horizontal"
-        android:text="Update Petugas"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="actionBack"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="6dp"
+            android:text="Update Petugas"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/et_nameUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TambahPetugas"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/lback"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_profile"
         android:drawablePadding="10dp"
@@ -59,11 +74,10 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/custum_text"
         android:drawableLeft="@drawable/ic_password"
-        android:drawableRight="@drawable/ic_passwordhide"
         android:drawablePadding="10dp"
-        android:textSize="15sp"
         android:fontFamily="@font/regular"
         android:hint="Password"
+        android:textSize="15sp"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -109,8 +123,6 @@
         tools:ignore="MissingConstraints" />
 
 
-
-
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
@@ -119,8 +131,8 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/custum_btn"
         android:fontFamily="@font/medium"
-        android:text="Update Petugas"
         android:onClick="onClick"
+        android:text="Save"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"

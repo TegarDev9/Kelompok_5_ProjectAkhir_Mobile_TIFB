@@ -18,6 +18,8 @@ import com.risquna.risqunaridho.Admin.API.ApiInterface;
 import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
 import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
+import com.risquna.risqunaridho.produk.produkActivity;
+import com.risquna.risqunaridho.produk.tambahProdukActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,8 +33,6 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
     private String nama, email, password, notelp,role;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -43,8 +43,6 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         etEmail = (EditText) findViewById ( R.id.et_emailUp );
         etPassword = (EditText) findViewById ( R.id.et_passwordUp );
         etrole = (EditText) findViewById ( R.id.et_role );
-
-
 
         btnSubmit = findViewById ( R.id.btn_submit );
         btnSubmit.setOnClickListener ( this );
@@ -92,5 +90,12 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         });
 
 
+    }
+
+    public void actionBack(View view) {
+        Intent intent = new Intent ( RegistrasiActivity.this, DashbordActivity.class );
+        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        startActivity ( intent );
+        finish ();
     }
 }

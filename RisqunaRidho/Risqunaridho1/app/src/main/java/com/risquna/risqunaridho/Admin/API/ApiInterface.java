@@ -131,4 +131,11 @@ public interface ApiInterface {
 
     @GET("risqunastore/api_jumlah_pesanancomplate.php")
     Call<String>ardGetJumlahPesananComplate();
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_upload_gambar.php")
+    Call<com.risquna.risqunaridho.produk.ResponseModel> ardUploadImage(
+            @Field("idproduk") int idproduk,
+            @Field("gambar") String gambar
+    );
 }

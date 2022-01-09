@@ -9,7 +9,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="160dp"
         android:layout_marginBottom="500dp"
         android:background="@drawable/bgkulah"
         tools:layout_editor_absoluteX="38dp"
@@ -27,53 +27,59 @@
 
     <Button
         android:id="@+id/btn_logout"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:text="Log Out"
-        />
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#8B0000"
+        android:text="Logout"
+        android:textAllCaps="false"
+        app:cardCornerRadius="10dp"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/img_profile1"
-        android:layout_marginTop="40dp"
+        android:layout_below="@+id/email"
+        android:layout_toRightOf="@+id/img_profile1"
+        android:layout_marginLeft="20dp"
         android:text="DAVID"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:translationX="120dp"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="16dp" />
+         />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/img_profile1"
         android:text="Email anda"
-        android:textColor="@color/white"
-        android:translationX="135dp" />
+        android:textColor="@color/white" />
 
     <ImageButton
         android:id="@+id/id_produk"
         android:layout_width="98dp"
         android:layout_height="91dp"
         android:layout_below="@+id/img_profile1"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="32dp"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/id_pemesanan"
         android:background="@drawable/custum_dasbord"
-        android:src="@drawable/ic_category"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045"
-        tools:layout_editor_absoluteX="33dp" />
+        android:src="@drawable/ic_category" />
 
     <TextView
         android:id="@+id/txtproduk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_produk"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         android:text="Produk" />
 
 
@@ -81,28 +87,28 @@
         android:id="@+id/id_pemesanan"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
         android:layout_below="@+id/img_profile1"
-        android:layout_toRightOf="@+id/id_produk"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custum_dasbord"
         android:src="@drawable/ic_document" />
 
-
     <TextView
+        android:id="@+id/txtpetugas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_pemesanan"
-        android:layout_marginLeft="165dp"
+        android:layout_marginLeft="78dp"
+        android:layout_toRightOf="@+id/txtproduk"
         android:text="Petugas" />
 
     <ImageButton
         android:id="@+id/id_pelanggan"
         android:layout_width="98dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
         android:layout_below="@+id/img_profile1"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="32dp"
         android:layout_toRightOf="@+id/id_pemesanan"
         android:background="@drawable/custum_dasbord"
         android:src="@drawable/ic_users" />
@@ -111,7 +117,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_pelanggan"
-        android:layout_marginLeft="270dp"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/txtpetugas"
         android:text="Pelanggan" />
 
     <TextView
@@ -119,10 +126,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtproduk"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:text="DASHBORD TOKO"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:text="Dashboard Toko"
         android:textColor="@color/black"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <HorizontalScrollView
@@ -130,10 +138,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtdashbord"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="16dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -242,7 +249,7 @@
                         android:id="@+id/img_pesananBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user" />
+                        android:src="@drawable/ic_new" />
 
                     <TextView
                         android:id="@+id/tv_pesananBaru"
@@ -284,7 +291,7 @@
                         android:id="@+id/img_sendingPackage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user" />
+                        android:src="@drawable/ic_send" />
 
                     <TextView
                         android:id="@+id/tv_sendingPackage"
@@ -325,7 +332,7 @@
                         android:id="@+id/img_pesananSelesai"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user" />
+                        android:src="@drawable/ic_done" />
 
                     <TextView
                         android:id="@+id/tv_pesananSelesai"
@@ -351,22 +358,25 @@
     </HorizontalScrollView>
 
     <TextView
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/hsv_dashboard"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:text="List Pesananan"
-        android:textSize="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:text="List Pesanan"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtdashbord"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/list"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="219dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="1dp">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -375,10 +385,6 @@
             android:layout_height="match_parent"
             tools:listitem="@layout/card_pemesanan" />
 
-
     </ScrollView>
-
-
-
 
 </RelativeLayout>
