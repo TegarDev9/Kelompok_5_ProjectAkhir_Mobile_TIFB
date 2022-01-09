@@ -6,8 +6,8 @@ public class LoginData {
     @SerializedName("idpetugas")
     private String idpetugas;
 
-    @SerializedName("nama")
-    private String nama;
+    @SerializedName("namapetugas")
+    private String namapetugas;
 
     @SerializedName("email")
     private String email;
@@ -20,12 +20,12 @@ public class LoginData {
         this.idpetugas = idpetugas;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamapetugas() {
+        return namapetugas;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNamapetugas(String namapetugas) {
+        this.namapetugas = namapetugas;
     }
 
     public String getEmail() {

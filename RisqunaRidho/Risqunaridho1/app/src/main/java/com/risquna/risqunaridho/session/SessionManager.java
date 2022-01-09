@@ -31,7 +31,7 @@ public class SessionManager {
         editor.putBoolean(IS_LOGGED_IN, true);
         editor.putString(ID_PETUGAS, user.getIdpetugas());
         editor.putString(EMAIL, user.getEmail());
-        editor.putString(NAMA, user.getNama());
+        editor.putString(NAMA, user.getNamapetugas ());
         editor.commit();
     }
 

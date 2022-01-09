@@ -79,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_produk"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="90dp"
         android:text="Produk" />
 
 
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_pemesanan"
-        android:layout_marginLeft="78dp"
+        android:layout_marginLeft="75dp"
         android:layout_toRightOf="@+id/txtproduk"
         android:text="Petugas" />
 
@@ -117,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_pelanggan"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="50dp"
         android:layout_toRightOf="@+id/txtpetugas"
         android:text="Pelanggan" />
 
