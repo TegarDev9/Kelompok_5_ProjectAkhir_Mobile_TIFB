@@ -138,4 +138,29 @@ public interface ApiInterface {
             @Field("idproduk") int idproduk,
             @Field("gambar") String gambar
     );
+
+    @GET("risqunastore/api_seecomplate.php")
+    Call<com.risquna.risqunaridho.transaksi.ResponseModel> ardSeeComplate();
+
+    @GET("risqunastore/api_retrievepemesanan.php")
+    Call<com.risquna.risqunaridho.transaksi.ResponseModel> ardRetrievePemesanan();
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_getpesanan.php")
+    Call<com.risquna.risqunaridho.transaksi.ResponseModel> ardGetPesanan(
+            @Field("idcart") int idcart
+    );
+
+    @FormUrlEncoded
+    @POST("risqunastore/api_updatesendingpackage.php")
+    Call<com.risquna.risqunaridho.transaksi.ResponseModel> ardGetUpdateSendingPackage(
+            @Field("idcart") int idcart,
+            @Field("status") String status
+    );
+    @FormUrlEncoded
+    @POST("risqunastore/api_updatecomplate.php")
+    Call<com.risquna.risqunaridho.transaksi.ResponseModel> ardGetUpdateComplate(
+            @Field("idcart") int idcart,
+            @Field("status") String status
+    );
 }

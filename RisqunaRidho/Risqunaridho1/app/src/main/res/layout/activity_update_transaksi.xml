@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu2"
+    android:padding="16dp"
+    tools:context=".transaksi.UpdateTransaksiActivity">
+
+    <LinearLayout
+        android:id="@+id/lback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="actionBack"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="6dp"
+            android:text="Kelola Pesanan"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lback"
+        android:padding="30dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  Nomor Pesanan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Pesanan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_kodeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custum_text"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/regular"
+                android:hint="Kode Pesanan"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--  Nama Pembeli  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pembeli"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_namaPembeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_kodeOrder"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custum_text"
+                android:fontFamily="@font/regular"
+                android:hint="Nama Pembeli"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--  Total Belanja  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Belanja"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_totalBelanja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custum_text"
+                android:fontFamily="@font/regular"
+                android:hint="Total Belanja"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!--            &lt;!&ndash;  Status  &ndash;&gt;-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Belanja"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_tanggalBelanja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custum_text"
+                android:hint="Tanggal"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black" />
+
+            <!--  Status  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custum_text"
+                android:hint="Status"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black" />
+
+            <!--  Button Save  -->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_status"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/custum_btn"
+                android:fontFamily="@font/medium"
+                android:text="Update Status"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

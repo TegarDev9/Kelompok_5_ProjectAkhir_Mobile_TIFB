@@ -32,7 +32,7 @@ public class tambahProdukActivity extends AppCompatActivity {
     private String stok;
     private int id_kategori;
     private Spinner sp_idkategori;
-    private String[] kategori = {"kerudung", "gamis"};
+    private String[] kategori = {"Kerudung", "Gamis"};
     private ApiInterface apiInterface;
     private Button btn_submit;
 
@@ -119,8 +119,6 @@ public class tambahProdukActivity extends AppCompatActivity {
 
     public void actionBack(View view) {
         Intent intent = new Intent ( tambahProdukActivity.this, produkActivity.class );
-        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
         startActivity ( intent );
-        finish ();
     }
 }

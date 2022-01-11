@@ -112,8 +112,6 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
 
     public void actionBack(View view) {
         Intent intent = new Intent ( updatepetugasActivity.this, petugasActivity.class );
-        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
         startActivity ( intent );
-        finish ();
     }
 }

@@ -10,7 +10,7 @@
     tools:context=".produk.tambahProdukActivity">
 
     <RelativeLayout
-        android:id="@+id/layoutData"
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -36,12 +36,18 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/layoutData"
+        android:layout_below="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
         <Spinner
             android:id="@+id/sp_idkategori"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/TambahProduk"
+            android:layout_height="43dp"
             android:layout_marginLeft="-3dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
@@ -118,7 +124,7 @@
             android:background="@drawable/custum_text"
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
-            android:hint="Harga Before"
+            android:hint="Stok"
             android:textSize="14sp" />
 
         <Button

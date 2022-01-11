@@ -7,13 +7,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RisqunaRidhoStore"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".transaksi.UpdateTransaksiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".transaksi.TransaksiActivity"
+            android:exported="true" />
         <activity
             android:name=".produk.UpdateGambarProdukActivity"
             android:exported="true" />

@@ -1,7 +1,6 @@
 package com.risquna.risqunaridho.pemesanan;
 
 public class DataPemesanan {
-
     private  int idcart;
     private String kodeorder,status;
 

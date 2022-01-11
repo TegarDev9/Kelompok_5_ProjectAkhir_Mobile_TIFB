@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,6 +25,7 @@ import com.risquna.risqunaridho.pemesanan.ResponseModel;
 import com.risquna.risqunaridho.petugas.petugasActivity;
 import com.risquna.risqunaridho.produk.produkActivity;
 import com.risquna.risqunaridho.session.SessionManager;
+import com.risquna.risqunaridho.transaksi.TransaksiActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +41,7 @@ public class DashbordActivity extends AppCompatActivity {
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
+    private SwipeRefreshLayout srlDashboard;
     private List<DataPemesanan> listData = new ArrayList<DataPemesanan> ();
 
     @Override
@@ -53,6 +56,7 @@ public class DashbordActivity extends AppCompatActivity {
         ImageButton btnpemesanan = findViewById ( R.id.id_pemesanan );
         ImageButton btnpelanggan = findViewById ( R.id.id_pelanggan );
         Button btnLogout = findViewById(R.id.btn_logout);
+        srlDashboard = findViewById(R.id.srl_dashboard);
 
         rvData = findViewById ( R.id.rv_data );
         lmData = new LinearLayoutManager ( this, LinearLayoutManager.VERTICAL, false );
@@ -63,6 +67,20 @@ public class DashbordActivity extends AppCompatActivity {
         getJumlahPesananBaru();
         getJumlahSendingPackage();
         getJumlahPesananSelesai();
+
+        srlDashboard.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlDashboard.setRefreshing(true);
+                retrieveData ();
+                getJumlahUser();
+                getJumlahPendapatan();
+                getJumlahPesananBaru();
+                getJumlahSendingPackage();
+                getJumlahPesananSelesai();
+                srlDashboard.setRefreshing(false);
+            }
+        });
 
         btnproduk.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -161,7 +179,7 @@ public class DashbordActivity extends AppCompatActivity {
                 int kode = response.body ().getKode ();
                 String pesan = response.body ().getPesan ();
 
-                Toast.makeText ( DashbordActivity.this, "Kode:" + kode + "  |Pesan:" + pesan, Toast.LENGTH_SHORT ).show ();
+//                Toast.makeText ( DashbordActivity.this, "Kode:" + kode + "  |Pesan:" + pesan, Toast.LENGTH_SHORT ).show ();
 
                 listData = response.body ().getData ();
 
@@ -272,7 +290,8 @@ public class DashbordActivity extends AppCompatActivity {
         });
     }
 
-
-
-
+    public void keTransaksi(View view) {
+        Intent intent = new Intent(DashbordActivity.this, TransaksiActivity.class);
+        startActivity(intent);
+    }
 }

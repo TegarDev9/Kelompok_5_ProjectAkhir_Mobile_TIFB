@@ -138,7 +138,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
                     int code = response.body().getCode();
                     String status = response.body().getStatus();
 
-                    Toast.makeText(ctx, "Code : "+code+ " | Status : "+status , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ctx, " Status : "+status , Toast.LENGTH_SHORT).show();
                 }
 
                 @Override

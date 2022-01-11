@@ -67,6 +67,9 @@ public class UpdateGambarProdukActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     uploadImage();
+                    Intent intent = new Intent ( UpdateGambarProdukActivity.this, produkActivity.class );
+                    intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+                    startActivity ( intent );
                 } catch (Exception e) {
                     // e.printStackTrace();
                     Toast.makeText(UpdateGambarProdukActivity.this, "Gagal memperbarui gambar produk", Toast.LENGTH_SHORT).show();
@@ -154,9 +157,7 @@ public class UpdateGambarProdukActivity extends AppCompatActivity {
     }
 
     public void actionBack(View view) {
-        Intent intent = new Intent ( UpdateGambarProdukActivity.this, UpdateProdukActivity.class );
-        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
+        Intent intent = new Intent ( UpdateGambarProdukActivity.this, produkActivity.class );
         startActivity ( intent );
-        finish ();
     }
 }

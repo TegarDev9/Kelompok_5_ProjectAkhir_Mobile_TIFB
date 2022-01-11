@@ -115,7 +115,7 @@ public class AdapterPetugas extends RecyclerView.Adapter<AdapterPetugas.HolderDa
                     int code = response.body ().getKode ();
                     String status = response.body ().getPesan ();
 
-                    Toast.makeText ( ctx, "Code : " + code + " | Status : " + status, Toast.LENGTH_SHORT ).show ();
+                    Toast.makeText ( ctx, " Status : " + status, Toast.LENGTH_SHORT ).show ();
                 }
 
                 @Override

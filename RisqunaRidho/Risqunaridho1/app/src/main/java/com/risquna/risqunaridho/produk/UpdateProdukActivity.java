@@ -36,7 +36,7 @@ public class UpdateProdukActivity extends AppCompatActivity {
     private String xNamaproduk, xImgproduk, xDeskripsi, xTgl, varFoto;
     private EditText etNama, etDeskripsi, etRating, etBefore, etAfter, etTanggal, etStok;
     private Spinner sp_idkategori;
-    private String[] kategori = {"kerudung", "gamis"};
+    private String[] kategori = {"Kerudung", "Gamis"};
     private Button btn_save;
     private ApiInterface apiInterface;
 //

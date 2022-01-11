@@ -89,7 +89,7 @@ public class produkActivity extends AppCompatActivity {
                 int code = response.body().getCode();
                 String status= response.body().getStatus();
 
-                Toast.makeText(produkActivity.this, "Code : " + code + "Status" + status, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(produkActivity.this, "Code : " + code + "Status" + status, Toast.LENGTH_SHORT).show();
 
                 listProduk = response.body().getProduk_list();
 
@@ -113,8 +113,6 @@ public class produkActivity extends AppCompatActivity {
 
     public void actionBack(View view) {
         Intent intent = new Intent ( produkActivity.this, DashbordActivity.class );
-        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
         startActivity ( intent );
-        finish ();
     }
 }

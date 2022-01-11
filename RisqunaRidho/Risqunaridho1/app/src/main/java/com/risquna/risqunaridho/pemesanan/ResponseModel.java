@@ -1,7 +1,5 @@
 package com.risquna.risqunaridho.pemesanan;
 
-
-
 import java.util.List;
 
 public class ResponseModel {
@@ -34,5 +32,3 @@ public class ResponseModel {
         this.data = data;
     }
 }
-
-

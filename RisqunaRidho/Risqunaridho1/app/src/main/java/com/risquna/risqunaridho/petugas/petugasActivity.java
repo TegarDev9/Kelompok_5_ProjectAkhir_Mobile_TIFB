@@ -97,7 +97,7 @@ public class petugasActivity extends AppCompatActivity {
                 int kode = response.body ().getKode ();
                 String pesan = response.body ().getPesan ();
 
-                Toast.makeText ( petugasActivity.this, "Kode:" + kode + "  |Pesan:" + pesan, Toast.LENGTH_SHORT ).show ();
+//                Toast.makeText ( petugasActivity.this, "Kode:" + kode + "  |Pesan:" + pesan, Toast.LENGTH_SHORT ).show ();
 
                 listData = response.body ().getData ();
 
@@ -143,8 +143,6 @@ public class petugasActivity extends AppCompatActivity {
 
     public void actionBack(View view) {
         Intent intent = new Intent ( petugasActivity.this, DashbordActivity.class );
-        intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY );
         startActivity ( intent );
-        finish ();
     }
 }
