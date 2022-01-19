@@ -1,4 +1,4 @@
-package com.risquna.risqunaridho.Admin.model.register;
+package com.risquna.risqunaridho.petugas;
 
 import static java.lang.Integer.parseInt;
 
@@ -9,17 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
-import com.risquna.risqunaridho.Admin.model.login.LoginActivity;
+import com.risquna.risqunaridho.Admin.model.register.Register;
 import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
-import com.risquna.risqunaridho.produk.produkActivity;
-import com.risquna.risqunaridho.produk.tambahProdukActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,7 +71,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
             public void onResponse(Call<Register> call, Response<Register> response) {
                 if(response.body() != null && response.isSuccessful() && response.body().isCode()){
                     Toast.makeText(RegistrasiActivity.this, response.body().getStatus(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegistrasiActivity.this, DashbordActivity.class);
+                    Intent intent = new Intent(RegistrasiActivity.this, petugasActivity.class);
                     startActivity(intent);
                     finish();
                 } else {

@@ -6,7 +6,7 @@
     android:background="@color/abu2"
     android:padding="30dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Admin.model.register.RegistrasiActivity">
+    tools:context=".petugas.RegistrasiActivity">
 
     <RelativeLayout
         android:id="@+id/layout"
@@ -50,7 +50,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Name"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/et_emailUp"
@@ -63,7 +64,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Email"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/et_passwordUp"
@@ -90,7 +92,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Phone number"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="number"/>
 
         <TextView
             android:id="@+id/tv_registerfor"

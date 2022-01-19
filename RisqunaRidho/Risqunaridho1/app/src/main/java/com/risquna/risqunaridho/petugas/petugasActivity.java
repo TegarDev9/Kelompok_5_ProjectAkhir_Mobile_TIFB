@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.risquna.risqunaridho.Admin.model.login.Login;
-import com.risquna.risqunaridho.Admin.model.register.RegistrasiActivity;
 import com.risquna.risqunaridho.DashbordActivity;
 import com.risquna.risqunaridho.R;
 
@@ -26,8 +25,6 @@ import android.widget.Toast;
 
 import com.risquna.risqunaridho.Admin.API.ApiClient;
 import com.risquna.risqunaridho.Admin.API.ApiInterface;
-import com.risquna.risqunaridho.produk.produkActivity;
-import com.risquna.risqunaridho.produk.tambahProdukActivity;
 
 
 import java.util.ArrayList;
@@ -111,7 +108,7 @@ public class petugasActivity extends AppCompatActivity {
             public void onFailure(Call<com.risquna.risqunaridho.petugas.ResponseModel> call, Throwable t) {
 
 
-                Toast.makeText ( petugasActivity.this, "gagal Menghubungkan Server" + t.getMessage (), Toast.LENGTH_SHORT ).show ();
+                Toast.makeText ( petugasActivity.this, "Gagal Menghubungkan Server" + t.getMessage (), Toast.LENGTH_SHORT ).show ();
 
                 pbPetugas.setVisibility(View.INVISIBLE);
             }

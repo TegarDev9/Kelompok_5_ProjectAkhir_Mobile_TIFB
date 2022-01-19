@@ -50,7 +50,8 @@
         android:fontFamily="@font/regular"
         android:hint="Name"
         android:textSize="15sp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/et_emailUp"
@@ -64,7 +65,8 @@
         android:fontFamily="@font/regular"
         android:hint="Email"
         android:textSize="15sp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:id="@+id/et_passwordUp"
@@ -93,7 +95,8 @@
         android:fontFamily="@font/regular"
         android:hint="Phone number"
         android:textSize="15sp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:inputType="number"/>
 
     <TextView
         android:id="@+id/tv_registerfor"

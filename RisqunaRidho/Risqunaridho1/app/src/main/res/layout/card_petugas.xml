@@ -59,7 +59,8 @@
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:text="Password" />
+            android:text="Password"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tv_role"

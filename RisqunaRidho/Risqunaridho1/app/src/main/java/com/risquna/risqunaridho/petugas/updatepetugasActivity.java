@@ -85,7 +85,7 @@ public class updatepetugasActivity extends AppCompatActivity implements View.OnC
                         int respon = response.body().getKode ();
                         if(respon == 1){
                             Toast.makeText(updatepetugasActivity.this, response.body().getPesan (), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(updatepetugasActivity.this, DashbordActivity.class);
+                            Intent intent = new Intent(updatepetugasActivity.this, petugasActivity.class);
                             startActivity(intent);
                             finish();
                         } else {

@@ -106,7 +106,8 @@
             android:fontFamily="@font/regular"
             android:hint="Deskripsi"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="text"/>
 
         <!--  Rating  -->
         <EditText
@@ -119,7 +120,8 @@
             android:background="@drawable/custum_text"
             android:fontFamily="@font/regular"
             android:hint="Rating"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="number"/>
 
         <!--  Harga Before  -->
         <EditText
@@ -133,7 +135,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Harga Before"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="number"/>
 
         <!--  Harga After  -->
         <EditText
@@ -147,7 +150,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Harga After"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="number"/>
 
         <!--  Harga Stok  -->
         <EditText
@@ -161,7 +165,8 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/regular"
             android:hint="Harga Before"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="number"/>
 
         <!--  Button Save  -->
         <Button
