@@ -13,7 +13,7 @@ public class ApiClient {
     //membuat base url
     //private static final String BASE_URL = "http://192.168.88.75:80";
     //private static final String BASE_URL = "http://192.168.43.195";
-    public static final String BASE_URL = "http://ws-tif.com/rizquna-ridho-store/";
+    public static final String BASE_URL = "https://ws-tif.com/rizquna-ridho-store/";
     private static Retrofit retrofit;
     private static ApiClient mInstance;
 
